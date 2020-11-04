@@ -5,6 +5,7 @@ use Framework\Entity;
 
 class Idea extends Entity
 {
+    protected $id;
     protected $author;
     protected $title;
     protected $content;
@@ -28,6 +29,11 @@ class Idea extends Entity
     }
 
     // setters
+    public function setId($id)
+    {
+        $this->id = (int) $id;
+    }
+
     public function setAuthor($author)
     {
         if (empty($author))
@@ -88,6 +94,11 @@ class Idea extends Entity
     }
 
     // getters
+    public function id()
+    {
+        return $this->id;
+    }
+
     public function author()
     {
         return $this->author;

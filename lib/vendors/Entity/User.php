@@ -5,6 +5,7 @@ use Framework\Entity;
 
 class User extends Entity
 {
+    protected $userID;
     protected $pseudo;
     protected $mail;
     protected $city;
@@ -14,6 +15,7 @@ class User extends Entity
     const INVALID_CITY = 2;
     const INVALID_PASSWORD = 3;
     const INVALID_MAIL = 4;
+    const INVALID_ID = 5;
 
     public function isValid()
     {
@@ -21,6 +23,15 @@ class User extends Entity
     }
 
     // setters
+    public function setUserID($id)
+    {
+        if (!is_int($id))
+        {
+            $this->errors[] = self::INVALID_ID;
+        }
+        $this->userID = $id;
+    }
+
     public function setPseudo($pseudo)
     {
         if (empty($pseudo))
@@ -58,6 +69,11 @@ class User extends Entity
     }
 
     // getters
+    public function userID()
+    {
+        return $this->userID;
+    }
+
     public function pseudo()
     {
         return $this->pseudo;

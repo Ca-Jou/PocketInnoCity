@@ -24,6 +24,23 @@ class IdeasManagerPDO extends IdeasManager
         return $ideasList;
     }
 
+    public function getCityList($cityID)
+    {
+        $sql = 'SELECT ideaID, author, title, content, location, likes, tag1, tag2, tag3, city, reports, done FROM ideas WHERE city = :city ORDER BY likes DESC';
+
+        $query = $this->dao->prepare($sql);
+        $query->execute([
+            'city' => $cityID
+        ]);
+        $query->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\Entity\Idea');
+
+        $cityIdeas = $query->fetchAll();
+
+        $query->closeCursor();
+
+        return $cityIdeas;
+    }
+
     public function getIdea($id)
     {
         $sql = 'SELECT ideaID, author, title, content, location, likes, tag1, tag2, tag3, city, reports, done FROM ideas WHERE ideaID = :id';
@@ -32,7 +49,7 @@ class IdeasManagerPDO extends IdeasManager
         $query->execute([
             'id' => $id
         ]);
-        $query->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\Entity\News');
+        $query->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\Entity\Idea');
 
         $idea = $query->fetch();
 
@@ -48,7 +65,7 @@ class IdeasManagerPDO extends IdeasManager
     {
         if (!$idea->isValid())
         {
-            throw new \RuntimeException('The news has to be valid to be saved.');
+            throw new \RuntimeException('The idea has to be valid to be saved.');
         }
 
         $query = $this->dao->prepare('INSERT INTO ideas SET 
