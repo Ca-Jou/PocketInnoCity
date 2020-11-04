@@ -6,7 +6,7 @@ use Framework\HTTPRequest;
 
 class ConnectionController extends BackController
 {
-    public function executeIndex(HTTPRequest $request)
+    public function executeSignin(HTTPRequest $request)
     {
         $this->page->addVar('title', 'Sign in');
 
@@ -21,7 +21,8 @@ class ConnectionController extends BackController
             if (isset($user) && $password == $user->password())
             {
                 $this->app->visitor()->setAuthenticated(true);
-                $this->app->httpResponse()->redirect('.');
+                $this->app->visitor()->setAttribute('userID', $user->userID());
+                $this->app->httpResponse()->redirect('/');
             }
             else
             {

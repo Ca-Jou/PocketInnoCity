@@ -1,5 +1,8 @@
 RewriteEngine On
 
+RewriteRule ^signin/ bootstrap.php?app=Backstage [QSA,L]
+RewriteRule ^auth/ bootstrap.php?app=Backstage [QSA,L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 
 RewriteRule ^(.*)$ bootstrap.php?app=Mainstage [QSA,L]

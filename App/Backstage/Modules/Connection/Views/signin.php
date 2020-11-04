@@ -1,5 +1,3 @@
-// TODO: remplacer par la page de connexion de Alexandre/Ilias/Jessica
-
 <h2>Connection</h2>
 
 <form action="" method="post">

@@ -46,11 +46,12 @@ class UsersManagerPDO extends UsersManager
             throw new \RuntimeException('The user you are trying to add is not valid.');
         }
 
-        $query = $this->dao->prepare('INSERT INTO users SET 
+        $query = $this->dao->prepare('INSERT INTO users VALUES (
                       pseudo = :pseudo,
                       mail = :mail,
                       city = :city,
-                      password = :password');
+                      password = :password
+                      )');
         $query->execute([
             'pseudo' => $user->pseudo(),
             'mail' => $user->mail(),

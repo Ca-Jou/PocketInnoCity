@@ -20,7 +20,7 @@ class BackstageApplication extends Application
         }
         else
         {
-            $controller = new ConnectionController($this, 'Connection', 'index');
+            $controller = new ConnectionController($this, 'Connection', 'signin');
         }
 
         $controller->execute();

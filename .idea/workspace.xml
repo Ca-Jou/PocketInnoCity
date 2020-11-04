@@ -21,38 +21,22 @@
   <component name="ChangeListManager">
     <list default="true" id="3fc27800-2cbf-4acd-a9b4-3df76e1004dc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0-Files/assets/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0-Files/assets/img/coeurPlein.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0-Files/assets/img/coeurVide.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0-Files/assets/img/gens.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0-Files/assets/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0-Files/assets/img/nav.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0-Files/assets/img/profil.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0-Files/assets/img/profilNav.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0-Files/assets/js/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0-Files/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0-Files/submit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0-Files/userInfo.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0-Files/ville.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Mainstage/Modules/Ideas/IdeasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Mainstage/Modules/Ideas/IdeasController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Mainstage/Modules/Ideas/Views/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0-Front à intégrer/submit.php" beforeDir="false" afterPath="$PROJECT_DIR$/0-Front à intégrer/submit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0-Front à intégrer/userInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backstage/Modules/Profile/View/showProfile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0-Front à intégrer/ville.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Backstage/BackstageApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backstage/BackstageApplication.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Backstage/Config/routes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backstage/Config/routes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Backstage/Modules/Connection/ConnectionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backstage/Modules/Connection/ConnectionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Backstage/Modules/Connection/Views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backstage/Modules/Connection/Views/signin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Backstage/Templates/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backstage/Templates/layout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Mainstage/Modules/Ideas/Views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Mainstage/Modules/Ideas/Views/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Mainstage/Templates/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Mainstage/Templates/layout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/css/Envision.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/images/bullet.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/images/button-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/images/clock.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/images/comment.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/images/content.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/images/delete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/images/dots.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/images/footer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/images/header.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/images/menu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/images/page.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/images/quote.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/images/square-green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/images/update.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Framework/Visitor.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Framework/Visitor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/Web/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/vendors/Entity/Idea.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/vendors/Entity/Idea.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/vendors/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/vendors/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/vendors/Model/IdeasManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/vendors/Model/IdeasManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/vendors/Model/IdeasManagerPDO.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/vendors/Model/IdeasManagerPDO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/vendors/Model/UsersManagerPDO.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/vendors/Model/UsersManagerPDO.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,18 +60,21 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/vendors/Entity" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/App/Backstage/Modules/Profile" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/App/Backstage/Modules/Profile/View" />
       <recent name="$PROJECT_DIR$/App/Mainstage/Modules/Ideas/Views" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib/vendors/Entity" />
+      <recent name="$PROJECT_DIR$/App/Backstage/Modules/Profile" />
       <recent name="$PROJECT_DIR$/lib/vendors/Model" />
+      <recent name="$PROJECT_DIR$/App/Backstage/Modules/Ideas" />
+      <recent name="$PROJECT_DIR$/lib/vendors/Entity" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -99,7 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604410347888</updated>
       <workItem from="1604410350016" duration="5492000" />
-      <workItem from="1604477033374" duration="9895000" />
+      <workItem from="1604477033374" duration="30571000" />
     </task>
     <servers />
   </component>

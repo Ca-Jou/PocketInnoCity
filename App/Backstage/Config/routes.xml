@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <routes>
-    <route url="/login/" module="Connection" action="index"></route>
+    <route url="/signin/" module="Connection" action="signin"></route>
+    <route url="/auth/city-([0-9]+)\.html" module="Ideas" action="show" vars="cityID"></route>
+    <route url="/auth/cities.html" module="Ideas" action="cities"></route>
+    <route url="/auth/profile.html" module="Profile" action="showProfile"></route>
 </routes>
