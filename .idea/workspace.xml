@@ -21,10 +21,38 @@
   <component name="ChangeListManager">
     <list default="true" id="3fc27800-2cbf-4acd-a9b4-3df76e1004dc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0-Files/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/0-Files/database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Framework/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Framework/Application.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Framework/Page.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Framework/Page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Framework/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Framework/Visitor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0-Files/assets/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0-Files/assets/img/coeurPlein.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0-Files/assets/img/coeurVide.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0-Files/assets/img/gens.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0-Files/assets/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0-Files/assets/img/nav.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0-Files/assets/img/profil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0-Files/assets/img/profilNav.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0-Files/assets/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0-Files/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0-Files/submit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0-Files/userInfo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0-Files/ville.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Mainstage/Modules/Ideas/IdeasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Mainstage/Modules/Ideas/IdeasController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Mainstage/Modules/Ideas/Views/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Mainstage/Templates/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Mainstage/Templates/layout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/css/Envision.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/images/bullet.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/images/button-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/images/clock.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/images/comment.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/images/content.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/images/delete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/images/dots.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/images/footer.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/images/header.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/images/menu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/images/page.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/images/quote.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/images/square-green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/images/update.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Framework/Visitor.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Framework/Visitor.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +82,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/App/Mainstage/Modules/Ideas/Views" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/lib/vendors/Entity" />
       <recent name="$PROJECT_DIR$/lib/vendors/Model" />
@@ -68,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604410347888</updated>
       <workItem from="1604410350016" duration="5492000" />
-      <workItem from="1604477033374" duration="5407000" />
+      <workItem from="1604477033374" duration="9895000" />
     </task>
     <servers />
   </component>

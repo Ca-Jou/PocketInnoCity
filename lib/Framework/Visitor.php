@@ -19,7 +19,7 @@ class Visitor extends ApplicationComponent
     {
         if (!is_bool($authenticated))
         {
-            throw new \InvalidArgumentException('Value specified to method User::setAuthenticated() should be of bool type.');
+            throw new \InvalidArgumentException('Value specified to method Visitor::setAuthenticated() should be of bool type.');
         }
         $_SESSION['auth'] = $authenticated;
     }

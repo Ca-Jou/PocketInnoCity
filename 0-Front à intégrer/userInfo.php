@@ -7,7 +7,7 @@
   </head>
   <body>
     <header>
-      <a href="index.php"><img class="logo" src="assets/img/logo.png" alt="logo"></a>
+      <a href="../App/Mainstage/Modules/Ideas/Views/index.php"><img class="logo" src="assets/img/logo.png" alt="logo"></a>
     </header>
     <section>
       <div class="userInfoPerso">

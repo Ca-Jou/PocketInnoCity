@@ -10,7 +10,7 @@ class IdeasController extends BackController
     {
         $nbIdeas = $this->app->config()->get('number_of_ideas');
 
-        $this->page->addVar('title', 'Global '.$nbIdeas.' most liked ideas !');
+        $this->page->addVar('title', 'Pocket Inno City');
 
         $manager = $this->managers->getManagerOf('Ideas');
 
