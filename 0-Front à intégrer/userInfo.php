@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr" dir="ltr">
-<head>
-    <meta charset="utf-8">
-    <title>Infos personnelles</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-<header>
-    <a href="index.php"><img class="logo" src="assets/img/logo.png" alt="logo"></a>
-</header>
+
 <section>
     <div class="userInfoPerso">
         <?php
@@ -95,38 +85,3 @@
         </button>
     </div>
 </section>
-<footer>
-    <nav>
-        <svg viewBox="0 0 375 24">
-            <path d="M0 13.5L33.0303 6.42207C71.2669 -1.77148 110.781 -2.00275 149.111 5.74267V5.74267C174.584 10.89 200.641 12.5266 226.558 10.6068L256.681 8.37548C273.537 7.1269 290.462 7.13695 307.317 8.40556L375 13.5V23.5H0L0 13.5Z" fill="#DBECF5"/>
-        </svg>
-        <ul>
-            <li><a href="#">Globe</a></li>
-            <li><a href="city.php">Bordeaux</a></li>
-            <li><a href="submit.php">Soumettre</a></li>
-            <?php
-            $users = 'Johanna';
-            if ($users === null) {
-                echo "<li><a href=''>Se connecter</a></li>";
-            } else {
-                echo '<li><a href="userInfo.php"><img src="assets/img/profilNav.png" alt="photo de profil"></a></li>';
-            }
-            ?>
-        </ul>
-    </nav>
-    <script>
-
-        function toggleHeart() {
-            const heart = document.getElementById(ideaID);
-            const fullHeart = heart.getAttribute('aria-expanded');
-            if(fullHeart === "true") {
-                heart.setAttribute('aria-expanded', "false");
-            }
-            else {
-                heart.setAttribute('aria-expanded', "true");
-            }
-        }
-    </script>
-</footer>
-</body>
-</html>
