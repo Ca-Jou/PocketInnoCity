@@ -22,7 +22,7 @@ class Page extends ApplicationComponent
             throw new \RuntimeException('Specified view does not exist.');
         }
 
-        $user = $this->app->user();
+        $visitor = $this->app->visitor();
 
         extract($this->vars);
 

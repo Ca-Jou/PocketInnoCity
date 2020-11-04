@@ -3,7 +3,7 @@ namespace Framework;
 
 session_start();
 
-class User extends ApplicationComponent
+class Visitor extends ApplicationComponent
 {
     public function setAttribute($attr, $value)
     {

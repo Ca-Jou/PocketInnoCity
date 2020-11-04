@@ -6,14 +6,14 @@ abstract class Application
     protected $httpRequest;
     protected $httpResponse;
     protected $name;
-    protected $user;
+    protected $visitor;
     protected $config;
 
     public function __construct()
     {
         $this->httpRequest = new HTTPRequest($this);
         $this->httpResponse = new HTTPResponse($this);
-        $this->user = new User($this);
+        $this->visitor = new Visitor($this);
         $this->config = new Config($this);
         $this->name = '';
     }
@@ -49,7 +49,7 @@ abstract class Application
         {
             if ($e->getCode() == Router::NO_ROUTE)
             {
-                // if the page dosn't exist -> 404!
+                // if the page doesn't exist -> 404!
                 $this->httpResponse->redirect404();
             }
         }
@@ -80,9 +80,9 @@ abstract class Application
         return $this->name;
     }
 
-    public function user()
+    public function visitor()
     {
-        return $this->user;
+        return $this->visitor;
     }
 
     public function config()
