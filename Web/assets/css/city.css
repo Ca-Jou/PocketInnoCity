@@ -4,10 +4,11 @@
   padding: 18px;
   border-radius: 10px;
   box-shadow: 7px 7px 14px #DBECF5,
-            -7px -7px 14px #ffffff;
+            -7px -7px 14px #DBECF5;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #ffffff;
 
 }
 .cardHeart:first-of-type {
@@ -29,6 +30,10 @@
 .cardHeart button svg path:nth-of-type(2) {
   fill: #DB5723;
 }
+.cardHeart button p {
+  color: #DB5723;
+  line-height: 0px;
+}
 button svg {
   fill: white;
 }
@@ -48,19 +53,20 @@ button svg {
   margin: 18px auto;
 }
 .city {
-  width: 70%;
-  margin: 18px auto;
-  padding: 18px;
+  width: 40%;
+  margin-left: 180px;
+  padding: 12px;
   border-radius: 10px;
   box-shadow: 7px 7px 14px #DBECF5,
-            -7px -7px 14px #ffffff;
+            -7px -7px 14px #DBECF5;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #ffffff;
 }
 .city svg {
-  width: 80px;
-  height: 80px;
+  width: 30px;
+  height: 30px;
   margin-right: 12px;
 }
 .city div p {
@@ -83,7 +89,6 @@ button svg {
      margin-left: 28px;
      margin-right: 12px;
    }
-
    .pSection {
      width: 86%;
      margin: 0 auto;
@@ -100,13 +105,16 @@ button svg {
    .cardHeart button {
      width: 40px;
    }
+   .cardHeart div p {
+     width: 90%;
+   }
    .cities h1{
-     width: 70%;
+     width: 80%;
      margin: 18px auto;
    }
    .city {
-     width: 80%;
-
+    width: 80%;
+    margin: 12px auto;
    }
    .city svg {
      width: 30px;

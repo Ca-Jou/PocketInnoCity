@@ -26,9 +26,27 @@
 .suggestions h1 {
   text-align: center;
 }
-
+.cardHeart:last-of-type {
+  margin-bottom: 12px;
+}
+.logout {
+  width: 200px;
+  padding: 20px;
+  background-color: #07689F;
+  color: white;
+  font-size: 18px;
+  border: 1px #07689F solid;
+  border-radius: 8px;
+  margin-top: 120px;
+  margin-left: 430px;
+  margin-bottom: 120px;
+}
  @media screen and (max-width:572px) {
    .userInfoPerso img {
      width: 120px;
+   }
+   .logout {
+     margin-top: 60px;
+     margin-left: 85px;
    }
  }
