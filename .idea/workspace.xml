@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fc27800-2cbf-4acd-a9b4-3df76e1004dc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0-Front à intégrer/userInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/0-Front à intégrer/userInfo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0-Front à intégrer/ville.php" beforeDir="false" afterPath="$PROJECT_DIR$/0-Front à intégrer/city.php" afterDir="false" />
-    </list>
+    <list default="true" id="3fc27800-2cbf-4acd-a9b4-3df76e1004dc" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +84,7 @@
       <updated>1604410347888</updated>
       <workItem from="1604410350016" duration="5492000" />
       <workItem from="1604477033374" duration="9895000" />
-      <workItem from="1604498127858" duration="198000" />
+      <workItem from="1604498127858" duration="319000" />
     </task>
     <servers />
   </component>
