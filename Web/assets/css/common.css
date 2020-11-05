@@ -4,7 +4,11 @@ body {
   color: #07689F;
   font-family: 'Raleway', sans-serif;
 }
-
+header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
 h1 {
   font-size: 24px;
 }

@@ -21,12 +21,19 @@
   <component name="ChangeListManager">
     <list default="true" id="3fc27800-2cbf-4acd-a9b4-3df76e1004dc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Backstage/Modules/Connection/ConnectionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backstage/Modules/Connection/ConnectionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Backstage/Modules/Connection/Views/signin.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backstage/Modules/Connection/Views/signin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Backstage/Modules/Connection/Views/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backstage/Modules/Connection/Views/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Backstage/Modules/Ideas/Views/cities.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backstage/Modules/Ideas/Views/cities.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Backstage/Modules/Ideas/Views/show.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backstage/Modules/Ideas/Views/show.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Backstage/Modules/Profile/Views/showProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backstage/Modules/Profile/Views/showProfile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Backstage/Templates/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backstage/Templates/layout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Mainstage/Modules/Ideas/Views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Mainstage/Modules/Ideas/Views/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Mainstage/Templates/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Mainstage/Templates/layout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/Web/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/assets/css/city.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/css/city.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/assets/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/css/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/assets/css/homePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/css/homePage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/assets/css/submit.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/css/submit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/assets/css/userInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/css/userInfo.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +41,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
-    <execution />
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,7 +75,19 @@
       <recent name="$PROJECT_DIR$/App/Mainstage/Modules/Ideas/Views" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -80,6 +101,7 @@
       <workItem from="1604410350016" duration="5492000" />
       <workItem from="1604477033374" duration="9895000" />
       <workItem from="1604498127858" duration="319000" />
+      <workItem from="1604596511037" duration="373000" />
     </task>
     <servers />
   </component>
@@ -91,12 +113,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="328" y="402" key="#SQL_Dialects" timestamp="1604410538959">

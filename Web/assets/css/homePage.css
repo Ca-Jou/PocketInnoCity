@@ -19,6 +19,29 @@ p:nth-of-type(2) {
 p:nth-of-type(3) {
   margin-left: 720px;
 }
+button {
+  width: 100%;
+  margin: 22px auto;
+  background: none;
+  border: none;
+}
+button a {
+  width: 190px;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  padding: 12px;
+  background-color: #DB5723;
+  font-size: 18px;
+  border: 1px #DB5723 solid;
+  border-radius: 8px;
+}
+button a svg {
+  width: 30px;
+  fill: white;
+}
+
 .top {
   width: 50%;
   margin: 0 auto;
@@ -47,41 +70,53 @@ p:nth-of-type(3) {
   font-size: 0.8em;
   color: white;
 }
-
+.description {
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px;
+}
+.description h2 {
+  margin-left: 120px;
+}
 @media screen and (max-width:572px) {
   h1 {
     margin-top: 0;
     margin-left: 12px;
+    margin-right: 16px;
     font-size: 28px;
   }
 
   p {
-    margin-left: 12px;
+    margin-left: 8px;
     font-size: 14px;
     width: 70%
   }
 
   .presentation img {
-    width: 310px;
+    width: 290px;
     margin-left: 44px;
   }
 
-  p:nth-of-type(2) {
-    margin-left: 130px;
+  p:nth-of-type(1) {
+    margin-left: 85px;
+    font-size: 16px;
+    line-height: 0px;
   }
 
-  p:nth-of-type(3) {
-    margin-left: 140px;
-    margin-bottom: 60px;
+  p:nth-of-type(2) {
+    margin-left: 105px;
+    margin-bottom: 10px;
   }
   .top {
-    width: 100%;
-    margin: 0;
+    width: 75%;
+
   }
   .top h2 {
-    margin-bottom: 20px;
+    margin-left: 8px;
+    margin-bottom: 8px;
   }
   .top ol {
+    padding: 8px;
     margin-bottom: 110px;
   }
   .top ol li {
@@ -90,5 +125,16 @@ p:nth-of-type(3) {
   .top ol li:before {
     padding: 8px 16px;
     border-radius: 12px;
+  }
+  .description {
+    width: 100%;
+    margin: 0;
+    padding: 0px;
+  }
+  .description h2 {
+    margin-left: 8px
+  }
+  .description p {
+    width: 80%;
   }
 }
