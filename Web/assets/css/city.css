@@ -3,8 +3,8 @@
   margin: 18px auto;
   padding: 18px;
   border-radius: 10px;
-  box-shadow: 7px 7px 14px #DBECF5,
-            -7px -7px 14px #DBECF5;
+  box-shadow: 8px 8px 24px #bdbdbd,
+             -8px -8px 24px #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,13 +52,14 @@ button svg {
   width: 70%;
   margin: 18px auto;
 }
+
 .city {
   width: 40%;
   margin-left: 180px;
   padding: 12px;
   border-radius: 10px;
-  box-shadow: 7px 7px 14px #DBECF5,
-            -7px -7px 14px #DBECF5;
+  box-shadow: 8px 8px 24px #bdbdbd,
+             -8px -8px 24px #ffffff;
   display: flex;
   align-items: center;
   justify-content: space-between;

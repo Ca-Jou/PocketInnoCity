@@ -17,7 +17,6 @@
         <img src="/assets/img/profil.png" alt='photo de profil'>
         <h2><strong><?= $user['pseudo'] ?></strong></h2>
         <p><?= $city['name'] ?> (<?= $city['country'] ?>)</p>
-        <a href="/signout/"><button type="button" name="button" class="logout">Se déconnecter</button></a>
     </div>
     <div class="userInfoPic">
         <div>
@@ -60,4 +59,6 @@
         <?php
     }
     ?>
+
+    <button type="button" name="button" class="logout"><a href="/signout/">Se déconnecter</a></button>
 </section>

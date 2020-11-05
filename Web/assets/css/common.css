@@ -24,10 +24,25 @@ h3 {
 a {
   text-decoration: none;
   color: #07689F;
+  cursor: pointer;
 }
 .logo {
   width: 75px;
 
+}
+.socialMedia ul li a svg {
+  width: 30px;
+  fill: #07689F;
+}
+.socialMedia ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 120px;
+}
+.socialMedia ul li {
+  list-style: none;
 }
 nav {
   position: fixed;

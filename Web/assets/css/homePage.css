@@ -52,7 +52,7 @@ button a svg {
 }
 .top ol {
   counter-reset: listSyle;
-  margin-bottom: 180px;
+
 }
 .top ol li {
   list-style-type: none;
@@ -117,7 +117,6 @@ button a svg {
   }
   .top ol {
     padding: 8px;
-    margin-bottom: 110px;
   }
   .top ol li {
     margin-bottom: 25px;
