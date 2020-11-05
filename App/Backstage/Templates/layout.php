@@ -1,20 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-<head>
-    <meta charset="utf-8">
-    <title><?= isset($title) ? $title : 'Pocket Inno City' ?></title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;600&display=swap" rel="stylesheet">
-</head>
-
-<body>
-<header>
-    <a href="#"><img class="logo" src="/assets/img/logo.png" alt="logo"></a>
-</header>
-
-<section id="main">
-    <?php if ($visitor->hasFlash()) echo '<p style="text-align: center;">', $visitor->getFlash(), '</p>'; ?>
-</section>
 
 <?= $content ?>
 
@@ -32,27 +17,16 @@
             else
             {
                 ?>
-                <li><a href="/auth/city-1.html">Monde</a></li>
-                <li><a href="/auth/cities.html">Mes villes</a></li>
-                <li><a href="/auth/submit.html">Soumettre</a></li>
-                <li><a href="/auth/profile.html"><img src="/assets/img/profilNav.png" alt=""></a></li>
+                <li><a href="/auth/city-1.php">Monde</a></li>
+                <li><a href="/auth/cities.php">Mes villes</a></li>
+                <li><a href="/auth/submit.php">Soumettre</a></li>
+                <li><a href="/auth/profile.php"><img src="/assets/img/profilNav.png" alt=""></a></li>
                 <?php
             }
             ?>
         </ul>
     </nav>
-    <script>
-        function toggleHeart() {
-            const heart = document.getElementById(ideaID);
-            const fullHeart = heart.getAttribute('aria-expanded');
-            if(fullHeart === "true") {
-                heart.setAttribute('aria-expanded', "false");
-            }
-            else {
-                heart.setAttribute('aria-expanded', "true");
-            }
-        }
-    </script>
+    <script type="text/javascript" src="/assets/js/script.js"></script>
 </footer>
 </body>
 </html>

@@ -21,6 +21,20 @@
   <component name="ChangeListManager">
     <list default="true" id="3fc27800-2cbf-4acd-a9b4-3df76e1004dc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0-Front à intégrer/cities.php" beforeDir="false" afterPath="$PROJECT_DIR$/0-Front à intégrer/intégré/cities.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0-Front à intégrer/city.php" beforeDir="false" afterPath="$PROJECT_DIR$/0-Front à intégrer/intégré/city.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0-Front à intégrer/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/0-Front à intégrer/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0-Front à intégrer/submit.php" beforeDir="false" afterPath="$PROJECT_DIR$/0-Front à intégrer/submit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0-Front à intégrer/userInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/0-Front à intégrer/userInfo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0-Front à intégrer/world.php" beforeDir="false" afterPath="$PROJECT_DIR$/0-Front à intégrer/world.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Backstage/Config/routes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backstage/Config/routes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Backstage/Modules/Ideas/IdeasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backstage/Modules/Ideas/IdeasController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Backstage/Modules/Ideas/Views/cities.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backstage/Modules/Ideas/Views/cities.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Backstage/Modules/Ideas/Views/show.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backstage/Modules/Ideas/Views/show.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Backstage/Templates/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backstage/Templates/layout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Mainstage/Templates/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Mainstage/Templates/layout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/assets/css/city.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/css/city.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/vendors/Model/CitiesManagerPDO.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/vendors/Model/CitiesManagerPDO.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,12 +65,13 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/App/Mainstage/Modules/Ideas/Views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/lib/vendors/Entity" />
       <recent name="$PROJECT_DIR$/lib/vendors/Model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/0-Front à intégrer/intégré" />
+      <recent name="$PROJECT_DIR$/App/Mainstage/Modules/Ideas/Views" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />

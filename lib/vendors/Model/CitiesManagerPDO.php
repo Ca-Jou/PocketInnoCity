@@ -82,6 +82,21 @@ class CitiesManagerPDO extends CitiesManager
         return $userCities;
     }
 
+    public function getUserSuggestions($userID)
+    {
+        $sql = 'SELECT cityID, name, zip, country FROM cities WHERE cityID NOT IN (SELECT city FROM subscriptions WHERE user = :id) AND cityID NOT IN (1)';
+
+        $query = $this->dao->prepare($sql);
+        $query->execute([
+            'id' => $userID
+        ]);
+
+        $query->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\Entity\City');
+
+        $userSuggestions = $query->fetchAll();
+        return $userSuggestions;
+    }
+
     protected function add(City $city)
     {
         if (!$city->isValid())

@@ -27,9 +27,11 @@ class IdeasController extends BackController
 
         $citiesManager = $this->managers->getManagerOf('Cities');
         $userCities = $citiesManager->getUserCities($userID);
+        $userSuggestions = $citiesManager->getUserSuggestions($userID);
 
         $this->page->addVar('title', 'PIC - Mes villes');
         $this->page->addVar('userCities', $userCities);
+        $this->page->addVar('userSuggestions', $userSuggestions);
     }
 
     public function executeSubmit(HTTPRequest $request)

@@ -43,7 +43,7 @@
         </svg>
         <ul>
           <li><a href="world.php">Globe</a></li>
-          <li><a href="cities.php">Mes villes</a></li>
+          <li><a href="intégré/cities.php">Mes villes</a></li>
           <li><a href="submit.php">Soumettre</a></li>
           <?php
             $users = 'Johanna';

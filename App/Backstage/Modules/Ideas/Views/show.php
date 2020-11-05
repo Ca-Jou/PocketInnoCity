@@ -1,47 +1,58 @@
-<section>
-    <article class="presentation">
-        <h1>PocketInnoCity</h1>
-        <p>L’application qui fait bouger le futur de ta ville et du monde !</p>
-    </article>
-    <article class="top">
-        <?php
-            if ($city->name() == 'Global')
-            {
-                $subtitle = 'Les idées pour inventer la ville de demain !';
-            }
-            else
-            {
-                $subtitle = 'Les idées pour améliorer '.$city->name().' !';
-            }
-        ?>
-        <h2><?= $subtitle ?></h2>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title><?= isset($title) ? $title : 'Pocket Inno City' ?></title>
+    <link rel="stylesheet" href="/assets/css/common.css">
+    <link rel="stylesheet" href="/assets/css/city.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;600&display=swap" rel="stylesheet">
+</head>
 
-        <?php
-        if (!empty($cityIdeas))
-        {
-            foreach ($cityIdeas as $idea)
-            {
-                ?>
-                <div class="cardHeart">
-                    <div>
-                        <h2><?= $idea['title'] ?></h2>
-                        <p><?= $idea['content'] ?></p>
-                    </div>
-                    <span>
-                        <svg viewBox="0 -28 512.00002 512">
-                            <path d="m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.136719 82.9375 50.78125 124.742187 30.992188 37.394531 75.535156 75.355469 127.117188 119.3125 17.613281 15.011719 37.578124 32.027344 58.308593 50.152344 5.476563 4.796875 12.503907 7.4375 19.792969 7.4375 7.285156 0 14.316406-2.640625 19.785156-7.429687 20.730469-18.128907 40.707032-35.152344 58.328125-50.171876 51.574219-43.949218 96.117188-81.90625 127.109375-119.304687 34.644532-41.800781 50.777344-81.4375 50.777344-124.742187 0-42.066407-14.425781-80.878907-40.617188-109.289063zm0 0"/>
-                        </svg>
-                    </span>
-                </div>
-            <?php
-            }
-        }
-        else
+<body>
+<header>
+    <a href="/"><img class="logo" src="/assets/img/logo.png" alt="logo"></a>
+</header>
+
+<section class="citySection">
+    <?php
+    if ($city->name() == 'Global')
+    {
+        $subtitle = 'Les idées pour inventer la ville de demain !';
+    }
+    else
+    {
+        $subtitle = 'Les idées pour améliorer '.$city->name().' !';
+    }
+    ?>
+    <h2><?= $subtitle ?></h2>
+    <p class="pSection">Retrouvez ici toutes les idées, votez pour celles que vous préférez et faites les remonter dans la liste !</p>
+
+    <?php
+    if (!empty($cityIdeas))
+    {
+        foreach ($cityIdeas as $idea)
         {
             ?>
-            Pas encore d'idées à afficher...
+            <div class="cardHeart">
+                <div>
+                    <h3><?= $idea['title'] ?></h3>
+                    <p><?= $idea['content'] ?></p>
+                </div>
+                <button role="button" onclick="toggleHeart(this)" class="dislike" name="button">
+                    <svg viewBox="0 -20 480 480">
+                        <path d="m348 8c-44.773438.003906-86.066406 24.164062-108 63.199219-21.933594-39.035157-63.226562-63.195313-108-63.199219-68.480469 0-124 63.519531-124 132 0 172 232 292 232 292s232-120 232-292c0-68.480469-55.519531-132-124-132zm0 0"/>
+                        <path d="m348 0c-43 .0664062-83.28125 21.039062-108 56.222656-24.71875-35.183594-65-56.1562498-108-56.222656-70.320312 0-132 65.425781-132 140 0 72.679688 41.039062 147.535156 118.6875 216.480469 35.976562 31.882812 75.441406 59.597656 117.640625 82.625 2.304687 1.1875 5.039063 1.1875 7.34375 0 42.183594-23.027344 81.636719-50.746094 117.601563-82.625 77.6875-68.945313 118.726562-143.800781 118.726562-216.480469 0-74.574219-61.679688-140-132-140zm-108 422.902344c-29.382812-16.214844-224-129.496094-224-282.902344 0-66.054688 54.199219-124 116-124 41.867188.074219 80.460938 22.660156 101.03125 59.128906 1.539062 2.351563 4.160156 3.765625 6.96875 3.765625s5.429688-1.414062 6.96875-3.765625c20.570312-36.46875 59.164062-59.054687 101.03125-59.128906 61.800781 0 116 57.945312 116 124 0 153.40625-194.617188 266.6875-224 282.902344zm0 0"/>
+                    </svg>
+                </button>
+            </div>
             <?php
         }
+    }
+    else
+    {
         ?>
+        Pas encore d'idées à afficher...
+        <?php
+    }
+    ?>
     </article>
 </section>

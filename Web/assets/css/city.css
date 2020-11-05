@@ -56,6 +56,7 @@ button svg {
             -7px -7px 14px #ffffff;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .city svg {
   width: 80px;
@@ -108,7 +109,7 @@ button svg {
 
    }
    .city svg {
-     width: 140px;
-     height: 140px
+     width: 30px;
+     height: 30px
    }
  }
