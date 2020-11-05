@@ -12,7 +12,10 @@
             <?php
             if (!$visitor->isAuthenticated())
             {
-                echo "<li><a href='/signin/'>Se connecter</a></li>";
+                ?>
+                <li><a href='/signin/'>Se connecter</a></li>
+                <li><a href='/signup/'>S'inscrire</a></li>
+                <?php
             }
             else
             {

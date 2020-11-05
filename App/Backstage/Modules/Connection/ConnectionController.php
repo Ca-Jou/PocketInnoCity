@@ -95,6 +95,6 @@ class ConnectionController extends BackController
         $this->app->visitor()->setAuthenticated(false);
         $this->app->visitor()->setFlash('Vous avez été déconnecté. Vous allez être redirigé vers l\'accueil.');
 
-        header('Refresh:3; url=/');
+        $this->app->httpResponse()->redirect('/');
     }
 }

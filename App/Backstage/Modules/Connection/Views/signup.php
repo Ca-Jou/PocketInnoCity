@@ -13,7 +13,7 @@
 </header>
 <section class="formSection">
     <h1>S'inscrire</h1>
-    <form class="form" action="signup.php" method="post">
+    <form class="form" action="" method="post">
 
         <label for="pseudo">Pseudo</label>
         <input type="text" name="pseudo">
