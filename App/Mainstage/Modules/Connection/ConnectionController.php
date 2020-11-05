@@ -11,30 +11,17 @@ class ConnectionController extends BackController
     {
         $this->page->addVar('title', 'Inscription');
 
-        $pseudo = $request->postData('pseudo');
-        $mail = $request->postData('mail');
-        $city = ucfirst($request->postData('city'));
-        $password = $request->postData('password');
+        if ($request->method() == 'POST')
+        {
+            $pseudo = $request->postData('pseudo');
+            $mail = $request->postData('mail');
+            $city = ucfirst($request->postData('city'));
+            $password = $request->postData('password');
 
-        if (!isset($pseudo) || empty($pseudo))
-        {
-            $this->app->visitor()->setFlash('Username is required.');
-        }
-        elseif (!isset($mail) || empty($mail))
-        {
-            $this->app->visitor()->setFlash('Mail address is required.');
-        }
-        elseif (!isset($city) || empty($city))
-        {
-            $this->app->visitor()->setFlash('City is required.');
-        }
-        elseif (!isset($password) || empty($password) || strlen($password) < 8)
-        {
-            $this->app->visitor()->setFlash('Invalid password. Password should contain at least 8 characters.');
-        }
-        else
-        {
-            $hashedPassword = hash('sha256', $password);
+            if (strlen($password) < 8)
+            {
+                $this->app->visitor()->setFlash('Invalid password. Password should contain at least 8 characters.');
+            }
 
             $cityManager = $this->managers->getManagerOf('Cities');
             $cityID = $cityManager->getID($city);
@@ -45,12 +32,19 @@ class ConnectionController extends BackController
                 $cityID = 1;
             }
 
+            $hashedPassword = hash('sha256', $password);
+
             $user = new User([
                 'pseudo' => $pseudo,
                 'mail' => $mail,
                 'city' => $cityID,
                 'password' => $hashedPassword
             ]);
+
+            if (!$user->isValid())
+            {
+                $this->app->visitor()->setFlash('Please fill all fields.');
+            }
 
             $userManager = $this->managers->getManagerOf('Users');
             $existing = $userManager->getUserByPseudo($pseudo);
@@ -63,7 +57,6 @@ class ConnectionController extends BackController
             else
             {
                 $userManager->add($user);
-                $user = $userManager->getUserByPseudo($pseudo);
                 $this->app->visitor()->setFlash('Your account was properly created!');
                 $this->app->visitor()->setAuthenticated(true);
             }

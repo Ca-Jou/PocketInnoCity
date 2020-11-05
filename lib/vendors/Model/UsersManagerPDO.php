@@ -33,11 +33,11 @@ class UsersManagerPDO extends UsersManager
         $query->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\Entity\User');
         $user = $query->fetch();
 
-        if (isset($user))
+        if ($user === false)
         {
-            return $user;
+            return null;
         }
-        return null;
+        return $user;
     }
 
     public function getUserById($id)
@@ -50,11 +50,11 @@ class UsersManagerPDO extends UsersManager
         $query->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\Entity\User');
         $user = $query->fetch();
 
-        if (isset($user))
+        if ($user === false)
         {
-            return $user;
+            return null;
         }
-        return null;
+        return $user;
     }
 
     public function add(User $user)
@@ -64,16 +64,12 @@ class UsersManagerPDO extends UsersManager
             throw new \RuntimeException('The user you are trying to add is not valid.');
         }
 
-        $query = $this->dao->prepare('INSERT INTO users VALUES (
-                      pseudo = :pseudo,
-                      mail = :mail,
-                      city = :city,
-                      password = :password
-                      )');
+        $query = $this->dao->prepare('INSERT INTO users (pseudo, mail, city, password) VALUES (:pseudo, :mail, :city, :password)');
+
         $query->execute([
             'pseudo' => $user->pseudo(),
             'mail' => $user->mail(),
-            'city' => $user->city(),
+            'city' => (int) $user->city(),
             'password' => $user->password()
         ]);
     }

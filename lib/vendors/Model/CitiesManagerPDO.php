@@ -36,12 +36,11 @@ class CitiesManagerPDO extends CitiesManager
 
         $city = $query->fetch();
 
-        if (isset($city))
+        if ($city === false)
         {
-            return $city;
+            return null;
         }
-
-        return null;
+        return $city;
     }
 
     public function getID($cityName)
@@ -55,7 +54,13 @@ class CitiesManagerPDO extends CitiesManager
             'name' => $cityName
         ]);
 
-        return $query->fetchColumn();
+        $cityID = $query->fetchColumn();
+
+        if ($cityID === false)
+        {
+            return null;
+        }
+        return $cityID;
     }
 
     public function getUserCities($userID)

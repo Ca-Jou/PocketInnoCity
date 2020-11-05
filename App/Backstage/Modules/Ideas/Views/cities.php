@@ -38,7 +38,7 @@
         else
         {
             ?>
-            <p>Vous n'avez adhéré à aucune ville.</p>
+            <p class="nocity">Vous n'avez adhéré à aucune ville.</p>
             <?php
         }
         ?>

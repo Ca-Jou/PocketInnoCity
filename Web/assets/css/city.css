@@ -112,6 +112,11 @@ button svg {
      width: 80%;
      margin: 18px auto;
    }
+
+   .nocity{
+     margin-left: 38px;
+   }
+
    .city {
     width: 80%;
     margin: 12px auto;
