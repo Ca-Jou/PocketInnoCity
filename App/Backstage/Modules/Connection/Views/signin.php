@@ -1,4 +1,4 @@
-<h2>Connection</h2>
+<h2><?= isset($title) ? $title : 'Pocket Inno City' ?></h2>
 
 <form action="" method="post">
     <label>Username</label>

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <routes>
+    <route url="/signup/" module="Connection" action="signup"></route>
     <route url="/signin/" module="Connection" action="signin"></route>
+    <route url="/signout/" module="Connection" action="signout"></route>
     <route url="/auth/city-([0-9]+)\.php" module="Ideas" action="show" vars="cityID"></route>
     <route url="/auth/cities.php" module="Ideas" action="cities"></route>
     <route url="/auth/profile.php" module="Profile" action="showProfile"></route>

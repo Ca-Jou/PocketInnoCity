@@ -27,7 +27,7 @@
                 ?>
                 <div class="city">
                     <div>
-                        <a href="/auth/city-<?= $city['cityID'] ?>.html"><h2><?= $city['name'] ?></h2></a>
+                        <a href="/auth/city-<?= $city['cityID'] ?>.php"><h2><?= $city['name'] ?></h2></a>
                         <p><?= $city['country'] ?></p>
                     </div>
                     <svg viewBox="0 0 512 512">
@@ -56,7 +56,7 @@
                 ?>
                 <div class="city">
                     <div>
-                        <a href="/auth/city-<?= $city['cityID'] ?>.html"><h2><?= $city['name'] ?></h2></a>
+                        <a href="/auth/city-<?= $city['cityID'] ?>.php"><h2><?= $city['name'] ?></h2></a>
                         <p><?= $city['country'] ?></p>
                     </div>
                     <svg viewBox="0 0 512 512">

@@ -82,14 +82,14 @@ CREATE TABLE IF NOT EXISTS likes (
 
 # Creation of our user entries
 INSERT INTO users VALUES
-(1, 'Alexandre', 'alexandre.le.porho@gmail.com', 1, 'password'),
-(2, 'Antoine', 'antfruche@gmail.com', 1, 'password'),
-(3, 'Camille', 'camille.jouan@epsi.fr', 1, 'password'),
-(4, 'Gaëtan', 'gaetan.filleul@gmail.com', 1, 'password'),
-(5, 'Ilias', 'ilias271099@gmail.com', 1, 'password'),
-(6, 'Johanna', 'johanna.jato@gmail.com', 1, 'password'),
-(7, 'Mathilde', 'mathildelazo@gmail.com', 1, 'password'),
-(8, 'Yohan', 'yohan.fevre0@gmail.com', 1, 'password');
+(1, 'Alexandre', 'alexandre.le.porho@gmail.com', 2, 'password'),
+(2, 'Antoine', 'antfruche@gmail.com', 2, 'password'),
+(3, 'Camille', 'camille.jouan@epsi.fr', 2, 'password'),
+(4, 'Gaëtan', 'gaetan.filleul@gmail.com', 2, 'password'),
+(5, 'Ilias', 'ilias271099@gmail.com', 2, 'password'),
+(6, 'Johanna', 'johanna.jato@gmail.com', 2, 'password'),
+(7, 'Mathilde', 'mathildelazo@gmail.com', 2, 'password'),
+(8, 'Yohan', 'yohan.fevre0@gmail.com', 2, 'password');
 
 # Creation of our roles = admins of the 'Global' city
 INSERT INTO roles(user, admin) VALUES

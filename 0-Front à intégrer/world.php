@@ -10,7 +10,7 @@
   </head>
   <body>
     <header>
-      <a href="index.php"><img class="logo" src="assets/img/logo.png" alt="logo"></a>
+      <a href="intégré/index.php"><img class="logo" src="assets/img/logo.png" alt="logo"></a>
     </header>
 
     <footer>
@@ -27,7 +27,7 @@
             if ($users === null) {
                 echo "<li><a href=''>Se connecter</a></li>";
             } else {
-                echo '<li><a href="userInfo.php"><img src="assets/img/profilNav.png" alt="photo de profil"></a></li>';
+                echo '<li><a href="intégré/userInfo.php"><img src="assets/img/profilNav.png" alt="photo de profil"></a></li>';
             }
            ?>
         </ul>

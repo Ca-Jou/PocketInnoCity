@@ -44,6 +44,20 @@ class CitiesManagerPDO extends CitiesManager
         return null;
     }
 
+    public function getID($cityName)
+    {
+        $cityName = ucfirst($cityname);
+
+        $sql = 'SELECT cityID FROM cities WHERE name = :name';
+
+        $query = $this->dao->prepare($sql);
+        $query->execute([
+            'name' => $cityName
+        ]);
+
+        return $query->fetch();
+    }
+
     public function getUserCities($userID)
     {
         $sql = 'SELECT city FROM subscriptions WHERE user = :user';

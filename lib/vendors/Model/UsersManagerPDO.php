@@ -57,7 +57,7 @@ class UsersManagerPDO extends UsersManager
         return null;
     }
 
-    protected function add(User $user)
+    public function add(User $user)
     {
         if (!$user->isValid())
         {

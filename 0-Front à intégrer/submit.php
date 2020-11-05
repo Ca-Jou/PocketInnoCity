@@ -11,7 +11,7 @@
   </head>
   <body>
     <header>
-      <a href="index.php"><img class="logo" src="assets/img/logo.png" alt="logo"></a>
+      <a href="intégré/index.php"><img class="logo" src="assets/img/logo.png" alt="logo"></a>
     </header>
     <section class="formSection">
       <h1>Soumettre une idée</h1>

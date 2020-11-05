@@ -12,7 +12,7 @@
   </head>
   <body>
     <header>
-      <a href="../index.php"><img class="logo" src="assets/img/logo.png" alt="logo"></a>
+      <a href="index.php"><img class="logo" src="assets/img/logo.png" alt="logo"></a>
     </header>
     <section class="citySection">
       <h2>Bienvenue dans le groupe de la ville de Bordeaux</h2>
@@ -189,7 +189,7 @@
             if ($users === null) {
                 echo "<li><a href=''>Se connecter</a></li>";
             } else {
-                echo '<li><a href="../userInfo.php"><img src="assets/img/profilNav.png" alt="photo de profil"></a></li>';
+                echo '<li><a href="userInfo.php"><img src="assets/img/profilNav.png" alt="photo de profil"></a></li>';
             }
            ?>
         </ul>

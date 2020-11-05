@@ -1,20 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-<head>
-    <meta charset="utf-8">
-    <title><?= isset($title) ? $title : 'Pocket Inno City' ?></title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;600&display=swap" rel="stylesheet">
-</head>
-
-<body>
-<header>
-    <a href="#"><img class="logo" src="/assets/img/logo.png" alt="logo"></a>
-</header>
-
-<section id="main">
-    <?php if ($visitor->hasFlash()) echo '<p style="text-align: center;">', $visitor->getFlash(), '</p>'; ?>
-</section>
 
 <?= $content ?>
 

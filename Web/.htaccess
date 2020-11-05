@@ -1,5 +1,6 @@
 RewriteEngine On
 
+RewriteRule ^signup/ bootstrap.php?app=Backstage [QSA,L]
 RewriteRule ^signin/ bootstrap.php?app=Backstage [QSA,L]
 RewriteRule ^auth/ bootstrap.php?app=Backstage [QSA,L]
 
