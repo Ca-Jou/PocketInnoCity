@@ -30,4 +30,17 @@ class ConnectionController extends BackController
             }
         }
     }
+<<<<<<< Updated upstream
+=======
+
+    public function executeSignout(HTTPRequest $request)
+    {
+        $this->page->addVar('title', 'Déconnexion');
+
+        $this->app->visitor()->setAuthenticated(false);
+        $this->app->visitor()->setFlash('Vous avez été déconnecté.e.');
+
+        $this->app->httpResponse()->redirect('/');
+    }
+>>>>>>> Stashed changes
 }

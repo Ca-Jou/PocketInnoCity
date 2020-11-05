@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <section>
     <article class="presentation">
         <h1>PocketInnoCity</h1>
@@ -15,6 +16,36 @@
             }
         ?>
         <h2><?= $subtitle ?></h2>
+=======
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title><?= isset($title) ? $title : 'Pocket Inno City' ?></title>
+    <link rel="stylesheet" href="/assets/css/common.css">
+    <link rel="stylesheet" href="/assets/css/city.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <a href="/"><img class="logo" src="/assets/img/logo.png" alt="logo"></a>
+    <h1>PocketInnoCity</h1>
+</header>
+
+<section class="citySection">
+    <?php
+    if ($city->name() == 'Global')
+    {
+        $subtitle = 'Les idées pour inventer la ville de demain !';
+    }
+    else
+    {
+        $subtitle = 'Les idées pour améliorer '.$city->name().' !';
+    }
+    ?>
+    <h2><?= $subtitle ?></h2>
+    <p class="pSection">Retrouvez ici toutes les idées, votez pour celles que vous préférez et faites les remonter dans la liste !</p>
+>>>>>>> Stashed changes
 
         <?php
         if (!empty($cityIdeas))

@@ -1,10 +1,3 @@
-<<<<<<< Updated upstream
-<h2>Connection</h2>
-
-<form action="" method="post">
-    <label>Username</label>
-    <input type="text" name="login" /><br />
-=======
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -20,12 +13,21 @@
     <h1>PocketInnoCity</h1>
 </header>
 <section class="formSection">
-    <h1>Se connecter</h1>
+    <h1>S'inscrire</h1>
     <form class="form" action="" method="post">
->>>>>>> Stashed changes
 
-    <label>Password</label>
-    <input type="password" name="password" /><br /><br />
+        <label for="pseudo">Pseudo</label>
+        <input type="text" name="pseudo">
 
-    <input type="submit" value="Sign in" />
-</form>
+        <label for="mail">Adresse mail</label>
+        <input type="email" name="mail">
+
+        <label for="city">Ville</label>
+        <input type="text" name="city">
+
+        <label for="password">Mot de passe</label>
+        <input type="password" name="password">
+
+        <input type="submit" name="" value="S'inscrire">
+    </form>
+</section>

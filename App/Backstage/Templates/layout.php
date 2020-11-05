@@ -32,10 +32,17 @@
             else
             {
                 ?>
+<<<<<<< Updated upstream
                 <li><a href="/auth/city-1.html">Monde</a></li>
                 <li><a href="/auth/cities.html">Mes villes</a></li>
                 <li><a href="/auth/submit.html">Soumettre</a></li>
                 <li><a href="/auth/profile.html"><img src="/assets/img/profilNav.png" alt=""></a></li>
+=======
+                <li><a href="/auth/cities.php">Mes villes</a></li>
+                <li><a href="/auth/submit.php">Partage</a></li>
+                <li><a href="/auth/city-1.php">Monde</a></li>
+                <li><a href="/auth/profile.php"><img src="/assets/img/profilNav.png" alt=""></a></li>
+>>>>>>> Stashed changes
                 <?php
             }
             ?>
