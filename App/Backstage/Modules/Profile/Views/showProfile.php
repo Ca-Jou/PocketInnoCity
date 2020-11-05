@@ -12,6 +12,7 @@
     <a href="/"><img class="logo" src="/assets/img/logo.png" alt="logo"></a>
     <h1>PocketInnoCity</h1>
 </header>
+
 <section>
     <div class="userInfoPerso">
         <img src="/assets/img/profil.png" alt='photo de profil'>

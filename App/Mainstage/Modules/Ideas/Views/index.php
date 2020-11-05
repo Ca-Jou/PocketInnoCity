@@ -13,6 +13,7 @@
 </header>
 <section>
     <article class="presentation">
+        <h1>PocketInnoCity</h1>
         <img src="/assets/img/gens.png" alt="image de conversation" class="pictureHomePage">
         <p>Partage tes <strong>idées</strong>,</p>
         <p>Et <strong>réinvente</strong> ton lieu de vie !</p>
