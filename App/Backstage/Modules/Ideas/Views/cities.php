@@ -13,10 +13,6 @@
     <h1>PocketInnoCity</h1>
 </header>
 
-<section id="main">
-    <?php if ($visitor->hasFlash()) echo '<p style="text-align: center;">', $visitor->getFlash(), '</p>'; ?>
-</section>
-
 <section>
     <section class="cities">
         <h1>Mes villes</h1>

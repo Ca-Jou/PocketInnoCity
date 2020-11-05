@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <routes>
     <route url="/" module="Ideas" action="index"></route>
+    <route url="/signup/" module="Connection" action="signup"></route>
 </routes>

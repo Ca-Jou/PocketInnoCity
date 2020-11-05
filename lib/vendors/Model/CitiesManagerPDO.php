@@ -46,7 +46,7 @@ class CitiesManagerPDO extends CitiesManager
 
     public function getID($cityName)
     {
-        $cityName = ucfirst($cityname);
+        $cityName = ucfirst($cityName);
 
         $sql = 'SELECT cityID FROM cities WHERE name = :name';
 
@@ -55,7 +55,7 @@ class CitiesManagerPDO extends CitiesManager
             'name' => $cityName
         ]);
 
-        return $query->fetch();
+        return $query->fetchColumn();
     }
 
     public function getUserCities($userID)
