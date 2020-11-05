@@ -12,10 +12,6 @@
     <a href="/"><img class="logo" src="/assets/img/logo.png" alt="logo"></a>
 </header>
 
-<section id="main">
-    <?php if ($visitor->hasFlash()) echo '<p style="text-align: center;">', $visitor->getFlash(), '</p>'; ?>
-</section>
-
 <section>
     <section class="cities">
         <h1>Mes villes</h1>

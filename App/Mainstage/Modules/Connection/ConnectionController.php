@@ -1,36 +1,12 @@
 <?php
-namespace App\Backstage\Modules\Connection;
+namespace App\Mainstage\Modules\Connection;
 
+use Entity\User;
 use Framework\BackController;
 use Framework\HTTPRequest;
 
 class ConnectionController extends BackController
 {
-    public function executeSignin(HTTPRequest $request)
-    {
-        $this->page->addVar('title', 'Connexion');
-
-        if ($request->postExists('login'))
-        {
-            $login = $request->postData('login');
-            $password = $request->postData('password');
-
-            $manager = $this->managers->getManagerOf('Users');
-            $user = $manager->getUserByPseudo($login);
-
-            if (isset($user) && hash('sha256',$password) === $user->password())
-            {
-                $this->app->visitor()->setAuthenticated(true);
-                $this->app->visitor()->setAttribute('userID', $user->userID());
-                $this->app->httpResponse()->redirect('/');
-            }
-            else
-            {
-                $this->app->visitor()->setFlash('Invalid username or password.');
-            }
-        }
-    }
-
     public function executeSignup(HTTPRequest $request)
     {
         $this->page->addVar('title', 'Inscription');
@@ -38,7 +14,7 @@ class ConnectionController extends BackController
         $pseudo = $request->postData('pseudo');
         $mail = $request->postData('mail');
         $city = ucfirst($request->postData('city'));
-        $password = hash('sha256', $request->postData('password'));
+        $password = $request->postData('password');
 
         if (!isset($pseudo) || empty($pseudo))
         {
@@ -58,14 +34,22 @@ class ConnectionController extends BackController
         }
         else
         {
+            $hashedPassword = hash('sha256', $password);
+
             $cityManager = $this->managers->getManagerOf('Cities');
             $cityID = $cityManager->getID($city);
+
+            if (!isset($cityID))
+            {
+                $this->app->visitor()->setFlash('Votre ville n\'est pas inscrite sur PocketInnoCity ! Vous ne pourrez pas lui soumettre vos idées.');
+                $cityID = 1;
+            }
 
             $user = new User([
                 'pseudo' => $pseudo,
                 'mail' => $mail,
                 'city' => $cityID,
-                'password' => $password
+                'password' => $hashedPassword
             ]);
 
             $userManager = $this->managers->getManagerOf('Users');
@@ -75,7 +59,6 @@ class ConnectionController extends BackController
             {
                 $this->app->visitor()->setFlash('This pseudo is not available, sorry !');
                 $this->app->visitor()->setAuthenticated(false);
-                $this->app->httpResponse()->redirect('/signup/');
             }
             else
             {
@@ -83,18 +66,7 @@ class ConnectionController extends BackController
                 $user = $userManager->getUserByPseudo($pseudo);
                 $this->app->visitor()->setFlash('Your account was properly created!');
                 $this->app->visitor()->setAuthenticated(true);
-                header('Refresh:3; url=/auth/');
             }
         }
-    }
-
-    public function executeSignout(HTTPRequest $request)
-    {
-        $this->page->addVar('title', 'Déconnexion');
-
-        $this->app->visitor()->setAuthenticated(false);
-        $this->app->visitor()->setFlash('Vous avez été déconnecté.');
-
-        $this->app->httpResponse()->redirect('/');
     }
 }
