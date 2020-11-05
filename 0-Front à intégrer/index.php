@@ -3,38 +3,34 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>Soumettre une idée</title>
-    <link rel="stylesheet" href="assets/css/submit.css">
+    <title>Pocket Inno City</title>
     <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/homePage.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;600&display=swap" rel="stylesheet">
-
   </head>
+
   <body>
     <header>
       <a href="index.php"><img class="logo" src="assets/img/logo.png" alt="logo"></a>
     </header>
-    <section class="formSection">
-      <h1>Soumettre une idée</h1>
-      <form class="form" action="index.html" method="post">
-
-        <label for="title">Titre*</label>
-        <input type="text" name="title">
-
-        <label for="description">Description*</label>
-        <textarea name="description"></textarea>
-
-        <label for="localisation">Localisation</label>
-        <input type="text" name="localisation">
-
-        <label for="chooseCategory">Global / Ville</label>
-        <select name="chooseCategory">
-          <option value="global">Global</option>
-          <option value="bordeaux">Bordeaux</option>
-        </select>
-        <input type="submit" name="" value="Envoyer">
-        <p>* Champs obligatoires</p>
-
-      </form>
+    <section>
+      <article class="presentation">
+        <h1>PocketInnoCity</h1>
+        <p>L’application qui fait bouger le futur de ta ville et du monde !</p>
+        <img src="assets/img/gens.png" alt="image de conversation" class="pictureHomePage">
+        <p>Participe aux sondages,</p>
+        <p>Et <strong>réinvente</strong> ton lieu de vie !</p>
+      </article>
+      <article class="top">
+        <h2>Top Idée dans le monde</h2>
+        <ol>
+          <li>Des Potagers partagés</li>
+          <li>Trocs de fruits et legumes</li>
+          <li>Plus d’espace pieton dans les villes</li>
+          <li>Atelier Zero dechet entre voisin</li>
+          <li>Trocs de fruits et legumes</li>
+        </ol>
+      </article>
     </section>
     <footer>
       <nav>

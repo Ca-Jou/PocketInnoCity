@@ -3,39 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>Soumettre une idée</title>
-    <link rel="stylesheet" href="assets/css/submit.css">
+    <title>Le monde</title>
     <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/city.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;600&display=swap" rel="stylesheet">
-
   </head>
   <body>
     <header>
       <a href="index.php"><img class="logo" src="assets/img/logo.png" alt="logo"></a>
     </header>
-    <section class="formSection">
-      <h1>Soumettre une idée</h1>
-      <form class="form" action="index.html" method="post">
 
-        <label for="title">Titre*</label>
-        <input type="text" name="title">
-
-        <label for="description">Description*</label>
-        <textarea name="description"></textarea>
-
-        <label for="localisation">Localisation</label>
-        <input type="text" name="localisation">
-
-        <label for="chooseCategory">Global / Ville</label>
-        <select name="chooseCategory">
-          <option value="global">Global</option>
-          <option value="bordeaux">Bordeaux</option>
-        </select>
-        <input type="submit" name="" value="Envoyer">
-        <p>* Champs obligatoires</p>
-
-      </form>
-    </section>
     <footer>
       <nav>
         <svg viewBox="0 0 375 24">

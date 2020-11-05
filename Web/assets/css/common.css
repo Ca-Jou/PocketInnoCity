@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #07689F;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  color: #07689F;
+}
+.logo {
+  width: 75px;
+
+}
+nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: #DBECF5;
+}
+nav ul li {
+  list-style: none;
+  padding: 8px;
+}
+nav ul li a {
+  color: #07689F;
+  text-decoration: none;
+  font-size: 18px;
+}
+nav ul li a img {
+  width: 55px;
+}
+nav svg {
+  margin-bottom: -38px;
+}
+@media screen and (max-width:572px) {
+  nav svg {
+    margin-bottom: -9px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}

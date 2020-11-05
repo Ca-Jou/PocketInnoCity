@@ -1,0 +1,114 @@
+.cardHeart {
+  width: 70%;
+  margin: 18px auto;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 7px 7px 14px #DBECF5,
+            -7px -7px 14px #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.cardHeart:first-of-type {
+  margin-top: 80px;
+}
+.cardHeart:last-of-type {
+  margin-bottom: 265px;
+}
+.cardHeart button {
+  width: 60px;
+  background-color: #ffffff;
+  border: none;
+  outline-style: none;
+}
+.cardHeart button:active {
+  outline-style: none;
+  color: none;
+}
+.cardHeart button svg path:nth-of-type(2) {
+  fill: #DB5723;
+}
+button svg {
+  fill: white;
+}
+.like svg {
+  fill: #DB5723;
+}
+
+.cardHeart div {
+  flex: 1 1 50%;
+}
+.cardHeart span svg {
+  fill: #DB5723;
+  width: 50px;
+}
+.cities h1{
+  width: 70%;
+  margin: 18px auto;
+}
+.city {
+  width: 70%;
+  margin: 18px auto;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 7px 7px 14px #DBECF5,
+            -7px -7px 14px #ffffff;
+  display: flex;
+  align-items: center;
+}
+.city svg {
+  width: 80px;
+  height: 80px;
+  margin-right: 12px;
+}
+.city div p {
+  width: 90%;
+}
+
+.city svg path:nth-of-type(1) {
+  fill: #07689F;
+}
+.city svg path:nth-of-type(2) {
+  fill: #ffffff;
+}
+.city:last-of-type {
+  margin-bottom: 120px;
+}
+
+
+ @media screen and (max-width:572px) {
+   .citySection h2 {
+     margin-left: 28px;
+     margin-right: 12px;
+   }
+
+   .pSection {
+     width: 86%;
+     margin: 0 auto;
+   }
+   .cardHeart {
+     width: 80%;
+   }
+   .cardHeart:first-of-type {
+     margin-top: 20px;
+   }
+   .cardHeart:last-of-type {
+     margin-bottom: 105px;
+   }
+   .cardHeart button {
+     width: 40px;
+   }
+   .cities h1{
+     width: 70%;
+     margin: 18px auto;
+   }
+   .city {
+     width: 80%;
+
+   }
+   .city svg {
+     width: 140px;
+     height: 140px
+   }
+ }
