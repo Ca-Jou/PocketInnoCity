@@ -42,7 +42,7 @@
         else
         {
             ?>
-            Vous n'avez adhéré à aucune ville.
+            <p>Vous n'avez adhéré à aucune ville.</p>
             <?php
         }
         ?>
