@@ -46,17 +46,38 @@ class CitiesManagerPDO extends CitiesManager
 
     public function getUserCities($userID)
     {
-        $sql = 'SELECT user, city FROM subscriptions WHERE user = :user';
+        $sql = 'SELECT city FROM subscriptions WHERE user = :user';
 
         $query = $this->dao->prepare($sql);
         $query->execute([
             'user' => $userID
         ]);
-        $query->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\Entity\City');
 
-        $userCities = $query->fetchAll();
+        $cityIDs = [];
+
+        while ($cityID = $query->fetchColumn())
+        {
+            $cityIDs[] = $cityID;
+        }
 
         $query->closeCursor();
+
+        $userCities = [];
+
+        foreach ($cityIDs as $cityID)
+        {
+            $sql = 'SELECT cityID, name, zip, country FROM cities WHERE cityID = :id';
+
+            $query = $this->dao->prepare($sql);
+            $query->execute([
+                'id' => $cityID
+            ]);
+
+            $query->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\Entity\City');
+            $city = $query->fetch();
+
+            $userCities[] = $city;
+        }
 
         return $userCities;
     }

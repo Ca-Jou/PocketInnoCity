@@ -102,6 +102,11 @@ INSERT INTO roles(user, admin) VALUES
 (7, 1),
 (8, 1);
 
+# Subscriptions for demonstration purposes
+INSERT INTO subscriptions(user, city) VALUES
+(3, 2),
+(3, 4);
+
 # Insertion of "fake" ideas for demonstration purposes
 INSERT INTO ideas(author, title, content, city) VALUES
 (3, 'Des potagers !', 'Installons des potagers partout où il est possible de les mettre en place, pour remettre du lien entre les habitant.e.s et leur nourriture!!!', 1),

@@ -7,9 +7,9 @@
         <h2>Mes villes</h2>
         <ol>
             <?php
-            if (!empty($citiesList))
+            if (!empty($userCities))
             {
-                foreach ($citiesList as $city)
+                foreach ($userCities as $city)
                 {
                     ?>
                     <li><a href="/auth/city-<?= $city['cityID'] ?>.html"><?= $city['name'] ?> (<?= $city['country'] ?>)</a></li>
