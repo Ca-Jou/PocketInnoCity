@@ -23,12 +23,30 @@ class UsersManagerPDO extends UsersManager
         return $usersList;
     }
 
-    public function getUser($pseudo)
+    public function getUserByPseudo($pseudo)
     {
-        $query = $this->dao->prepare('SELECT * FROM users WHERE pseudo = :pseudo');
+        $query = $this->dao->prepare('SELECT userID, pseudo, mail, city, password FROM users WHERE pseudo = :pseudo');
         $query->execute([
             'pseudo' => $pseudo
         ]);
+
+        $query->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\Entity\User');
+        $user = $query->fetch();
+
+        if (isset($user))
+        {
+            return $user;
+        }
+        return null;
+    }
+
+    public function getUserById($id)
+    {
+        $query = $this->dao->prepare('SELECT userID, pseudo, mail, city, password FROM users WHERE userID = :id');
+        $query->execute([
+            'id' => $id
+        ]);
+
         $query->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\Entity\User');
         $user = $query->fetch();
 

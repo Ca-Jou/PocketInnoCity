@@ -16,7 +16,7 @@ class ConnectionController extends BackController
             $password = $request->postData('password');
 
             $manager = $this->managers->getManagerOf('Users');
-            $user = $manager->getUser($login);
+            $user = $manager->getUserByPseudo($login);
 
             if (isset($user) && $password == $user->password())
             {

@@ -41,6 +41,23 @@ class IdeasManagerPDO extends IdeasManager
         return $cityIdeas;
     }
 
+    public function getUserList($userID)
+    {
+        $sql = 'SELECT ideaID, author, title, content, location, likes, tag1, tag2, tag3, city, reports, done FROM ideas WHERE author = :author ORDER BY likes DESC';
+
+        $query = $this->dao->prepare($sql);
+        $query->execute([
+            'author' => $userID
+        ]);
+        $query->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\Entity\Idea');
+
+        $userIdeas = $query->fetchAll();
+
+        $query->closeCursor();
+
+        return $userIdeas;
+    }
+
     public function getIdea($id)
     {
         $sql = 'SELECT ideaID, author, title, content, location, likes, tag1, tag2, tag3, city, reports, done FROM ideas WHERE ideaID = :id';

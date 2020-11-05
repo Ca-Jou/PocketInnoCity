@@ -26,9 +26,14 @@ class IdeasController extends BackController
         $userID = $this->app()->visitor()->getAttribute('userID');
 
         $citiesManager = $this->managers->getManagerOf('Cities');
-        $citiesList = $citiesManager->getUserCities($userID);
+        $userCities = $citiesManager->getUserCities($userID);
 
         $this->page->addVar('title', 'PIC - Mes villes');
-        $this->page->addVar('citiesList', $citiesList);
+        $this->page->addVar('userCities', $userCities);
+    }
+
+    public function executeSubmit(HTTPRequest $request)
+    {
+
     }
 }

@@ -20,6 +20,11 @@ class City extends Entity
         return !(empty($this->name) || empty($this->zip) || empty($this->country));
     }
 
+    public function isAdmin(User $user)
+    {
+        return ($user->userID() == $this->admin);
+    }
+
     // setters
     public function setCityID($id)
     {
