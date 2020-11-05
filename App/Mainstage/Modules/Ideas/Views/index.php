@@ -13,11 +13,11 @@
 </header>
 <section>
     <article class="presentation">
-        <img src="assets/img/gens.png" alt="image de conversation" class="pictureHomePage">
+        <img src="/assets/img/gens.png" alt="image de conversation" class="pictureHomePage">
         <p>Partage tes <strong>idées</strong>,</p>
         <p>Et <strong>réinvente</strong> ton lieu de vie !</p>
         <button type="button" name="button">
-            <a href="submit.php">
+            <a href="/auth/submit.php">
                 <svg  viewBox="0 0 24 24">
                     <path d="m12 3.457c-.414 0-.75-.336-.75-.75v-1.957c0-.414.336-.75.75-.75s.75.336.75.75v1.957c0 .414-.336.75-.75.75z"/>
                     <path d="m18.571 6.179c-.192 0-.384-.073-.53-.22-.293-.293-.293-.768 0-1.061l1.384-1.384c.293-.293.768-.293 1.061 0s.293.768 0 1.061l-1.384 1.384c-.147.146-.339.22-.531.22z"/>

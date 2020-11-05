@@ -78,7 +78,7 @@ class IdeasManagerPDO extends IdeasManager
         return null;
     }
 
-    protected function add(Idea $idea)
+    public function add(Idea $idea)
     {
         if (!$idea->isValid())
         {
@@ -90,21 +90,19 @@ class IdeasManagerPDO extends IdeasManager
                       title = :title,
                       content = :content,
                       location = :location,
-                      likes = 0,
                       tag1 = :tag1,
                       tag2 = :tag2,
                       tag3 = :tag3,
-                      city = :city,
-                      reported = F,
-                      done = F');
+                      city = :city
+        ');
         $query->execute([
             'author' => $idea->author(),
             'title' => $idea->title(),
             'content' => $idea->content(),
             'location' => $idea->location(),
-            'tag1' => isset($idea->tags()[0])? $idea->tags()[0] : null,
-            'tag2' => isset($idea->tags()[1])? $idea->tags()[1] : null,
-            'tag3' => isset($idea->tags()[2])? $idea->tags()[2] : null,
+            'tag1' => $idea->tag1(),
+            'tag2' => $idea->tag2(),
+            'tag3' => $idea->tag3(),
             'city' => $idea->city()
         ]);
     }

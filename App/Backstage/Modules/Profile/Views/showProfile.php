@@ -9,7 +9,7 @@
 </head>
 <body>
 <header>
-    <a href="index.php"><img class="logo" src="assets/img/logo.png" alt="logo"></a>
+    <a href="/"><img class="logo" src="/assets/img/logo.png" alt="logo"></a>
     <h1>PocketInnoCity</h1>
 </header>
 <section>

@@ -24,9 +24,9 @@
             else
             {
                 ?>
-                <li><a href="cities.php">Mes villes</a></li>
-                <li><a href="submit.php">Partage</a></li>
-                <li><a href="world.php">Monde</a></li>
+                <li><a href="/auth/cities.php">Mes villes</a></li>
+                <li><a href="/auth/submit.php">Partage</a></li>
+                <li><a href="/auth/city-1.php">Monde</a></li>
                 <li><a href="/auth/profile.php"><img src="/assets/img/profilNav.png" alt=""></a></li>
                 <?php
             }

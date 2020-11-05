@@ -128,4 +128,19 @@ class Idea extends Entity
     {
         return $this->likes;
     }
+
+    public function tag1()
+    {
+        return $this->tag1;
+    }
+
+    public function tag2()
+    {
+        return $this->tag2;
+    }
+
+    public function tag3()
+    {
+        return $this->tag3;
+    }
 }

@@ -10,7 +10,7 @@
   </head>
   <body>
     <header>
-      <a href="intégré/index.php"><img class="logo" src="assets/img/logo.png" alt="logo"></a>
+      <a href="index.php"><img class="logo" src="assets/img/logo.png" alt="logo"></a>
     </header>
 
     <footer>
@@ -20,14 +20,14 @@
         </svg>
         <ul>
           <li><a href="world.php">Globe</a></li>
-          <li><a href="intégré/cities.php">Mes villes</a></li>
+          <li><a href="cities.php">Mes villes</a></li>
           <li><a href="submit.php">Soumettre</a></li>
           <?php
             $users = 'Johanna';
             if ($users === null) {
                 echo "<li><a href=''>Se connecter</a></li>";
             } else {
-                echo '<li><a href="intégré/userInfo.php"><img src="assets/img/profilNav.png" alt="photo de profil"></a></li>';
+                echo '<li><a href="userInfo.php"><img src="assets/img/profilNav.png" alt="photo de profil"></a></li>';
             }
            ?>
         </ul>
