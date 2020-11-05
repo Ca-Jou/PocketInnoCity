@@ -5,7 +5,7 @@
   flex-direction: column;
 }
 
-.formSignUp .form input[type='submit'] {
+.form input[type='submit'] {
   margin: 30px auto;
   padding: 20px;
   background-color: #07689F;
@@ -14,9 +14,9 @@
   border: 1px #07689F solid;
   border-radius: 8px;
 }
-.formSignUp input[type='text'],
-.formSignUp input[type='email'],
-.formSignUp input[type='password']
+input[type='text'],
+input[type='email'],
+input[type='password']
  {
   padding: 14px;
   border: 1px grey solid;
@@ -26,6 +26,6 @@ label {
   margin: 18px 0;
   font-size: 18px;
 }
-.formSignUp h1 {
+.formSection h1 {
   text-align: center;
 }
