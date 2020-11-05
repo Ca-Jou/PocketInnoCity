@@ -34,7 +34,7 @@
                 ?>
                 <li><a href="/auth/city-1.html">Monde</a></li>
                 <li><a href="/auth/cities.html">Mes villes</a></li>
-                <li><a href="submit.php">Soumettre</a></li>   <!-- TODO: modif route -->
+                <li><a href="/auth/submit.html">Soumettre</a></li>
                 <li><a href="/auth/profile.html"><img src="/assets/img/profilNav.png" alt=""></a></li>
                 <?php
             }

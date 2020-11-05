@@ -31,4 +31,9 @@ class IdeasController extends BackController
         $this->page->addVar('title', 'PIC - Mes villes');
         $this->page->addVar('userCities', $userCities);
     }
+
+    public function executeSubmit(HTTPRequest $request)
+    {
+
+    }
 }
