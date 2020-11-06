@@ -57,6 +57,25 @@ class UsersManagerPDO extends UsersManager
         return $user;
     }
 
+    public function getUserLikes($userID)
+    {
+        $query = $this->dao->prepare('SELECT idea FROM likes WHERE user = :user');
+        $query->execute([
+            'user' => $userID
+        ]);
+
+        $userLikes = [];
+
+        while ($ideaID = $query->fetchColumn())
+        {
+            $userLikes[] = $ideaID;
+        }
+
+        $query->closeCursor();
+
+        return $userLikes;
+    }
+
     public function add(User $user)
     {
         if (!$user->isValid())

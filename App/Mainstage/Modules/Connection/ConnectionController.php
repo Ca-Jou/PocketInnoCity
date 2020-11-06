@@ -13,10 +13,10 @@ class ConnectionController extends BackController
 
         if ($request->method() == 'POST')
         {
-            $pseudo = $request->postData('pseudo');
-            $mail = $request->postData('mail');
-            $city = ucfirst($request->postData('city'));
-            $password = $request->postData('password');
+            $pseudo = htmlspecialchars($request->postData('pseudo'));
+            $mail = htmlspecialchars($request->postData('mail'));
+            $city = ucfirst(htmlspecialchars($request->postData('city')));
+            $password = htmlspecialchars($request->postData('password'));
 
             if (strlen($password) < 8)
             {

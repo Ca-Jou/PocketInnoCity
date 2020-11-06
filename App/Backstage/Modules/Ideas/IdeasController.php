@@ -9,7 +9,12 @@ class IdeasController extends BackController
 {
     public function executeShow(HTTPRequest $request)
     {
-        $cityID = $request->getData('cityID');
+        $userID = $this->app()->visitor()->getAttribute('userID');
+
+        $userManager = $this->managers->getManagerOf('Users');
+        $userLikes = $userManager->getUserLikes($userID);
+
+        $cityID = htmlspecialchars($request->getData('cityID'));
 
         $ideasManager = $this->managers->getManagerOf('Ideas');
         $cityIdeas = $ideasManager->getCityList($cityID);
@@ -19,6 +24,7 @@ class IdeasController extends BackController
 
         $this->page->addVar('title', 'PIC - '.$city->name());
         $this->page->addVar('cityIdeas', $cityIdeas);
+        $this->page->addVar('userLikes', $userLikes);
         $this->page->addVar('city', $city);
     }
 
@@ -48,10 +54,10 @@ class IdeasController extends BackController
         {
             $idea = new Idea([
                 'author' => $userID,
-                'title' => $request->postData('title'),
-                'content' => $request->postData('content'),
-                'location' => $request->postData('location'),
-                'city' => $request->postData('city')
+                'title' => htmlspecialchars($request->postData('title')),
+                'content' => htmlspecialchars($request->postData('content')),
+                'location' => htmlspecialchars($request->postData('location')),
+                'city' => htmlspecialchars($request->postData('city'))
             ]);
 
             if (!$idea->isValid())

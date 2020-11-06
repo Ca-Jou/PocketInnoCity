@@ -35,7 +35,7 @@
             }
             ?>
         </select>
-        <input type="submit" name="" value="Envoyer">
         <p>* Champs obligatoires</p>
+        <input type="submit" name="" value="Envoyer">
     </form>
 </section>
