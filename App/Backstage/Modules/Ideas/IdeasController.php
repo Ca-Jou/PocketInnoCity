@@ -81,13 +81,21 @@ class IdeasController extends BackController
 
         $userID = $this->app()->visitor()->getAttribute('userID');
         $ideaID = htmlspecialchars($request->getData('ideaID'));
-        $cityID = htmlspecialchars($request->getData('cityID'));
 
         $likesManager = $this->managers->getManagerOf('Likes');
-        $like = $likesManager->add($userID, $ideaID);
+        $likesManager->add($userID, $ideaID);
 
+        $ideasManager = $this->managers->getManagerOf('Ideas');
+        $ideasManager->addLike($ideaID);
+
+        $idea = $ideasManager->getIdea($ideaID);
+        $cityID = $idea->city();
+
+        $usersManager = $this->managers->getManagerOf('Users');
+        $userLikes = $userLikes = $usersManager->getUserLikes($userID);
+
+        $this->page->addVar('userLikes', $userLikes);
         $this->app->httpResponse()->redirect('/auth/city-'.$cityID.'.php');
-        $this->page->addVar('like', $like); // vaut true si le like a fonctionné, false sinon
     }
 
     public function executeUnlike(HTTPRequest $request)
@@ -96,12 +104,20 @@ class IdeasController extends BackController
 
         $userID = $this->app()->visitor()->getAttribute('userID');
         $ideaID = htmlspecialchars($request->getData('ideaID'));
-        $cityID = htmlspecialchars($request->getData('cityID'));
 
         $likesManager = $this->managers->getManagerOf('Likes');
-        $unlike = $likesManager->delete($userID, $ideaID);
+        $likesManager->delete($userID, $ideaID);
 
+        $ideasManager = $this->managers->getManagerOf('Ideas');
+        $ideasManager->withdrawLike($ideaID);
+
+        $idea = $ideasManager->getIdea($ideaID);
+        $cityID = $idea->city();
+
+        $usersManager = $this->managers->getManagerOf('Users');
+        $userLikes = $userLikes = $usersManager->getUserLikes($userID);
+
+        $this->page->addVar('userLikes', $userLikes);
         $this->app->httpResponse()->redirect('/auth/city-'.$cityID.'.php');
-        $this->page->addVar('unlike', $unlike); // vaut true si le unlike a fonctionné, false sinon
     }
 }

@@ -114,4 +114,25 @@ class IdeasManagerPDO extends IdeasManager
             'id' => $id
         ]);
     }
+
+    public function addLike($id)
+    {
+        $query = $this->dao->prepare('UPDATE ideas SET likes = likes + 1 WHERE ideaID = :id');
+        $query->execute([
+            'id' => $id
+        ]);
+    }
+
+    public function withdrawLike($id)
+    {
+        $idea = $this->getIdea($id);
+
+        if ($idea->likes() > 0)
+        {
+            $query = $this->dao->prepare('UPDATE ideas SET likes = likes - 1 WHERE ideaID = :id');
+            $query->execute([
+                'id' => $id
+            ]);
+        }
+    }
 }

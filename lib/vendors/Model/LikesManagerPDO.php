@@ -5,29 +5,32 @@ class LikesManagerPDO extends LikesManager
 {
     public function add($userID, $ideaID)
     {
-        $query = $this->dao->prepare('SELECT id FROM likes WHERE user = :user AND idea = :idea');
-        $query->execute([
-            'user' => $userID,
-            'idea' => $ideaID
-        ]);
-
-        $exists = $query->fetchColumn();
-        $query->closeCursor();
+        $exists = $this->exists($userID, $ideaID);
 
         if (!$exists)
         {
             $query = $this->dao->prepare('INSERT INTO likes (user, idea) VALUES (:user, :idea)');
             $query->execute([
                 'user' => $userID,
-                'city' => $ideaID
+                'idea' => $ideaID
             ]);
-
-            return true;
         }
-        return false;
     }
 
     public function delete($userID, $ideaID)
+    {
+        $exists = $this->exists($userID, $ideaID);
+
+        if ($exists !== false)
+        {
+            $query = $this->dao->prepare('DELETE FROM likes WHERE id = :id');
+            $query->execute([
+                'id' => $exists
+            ]);
+        }
+    }
+
+    public function exists($userID, $ideaID)
     {
         $query = $this->dao->prepare('SELECT id FROM likes WHERE user = :user AND idea = :idea');
         $query->execute([
@@ -35,19 +38,6 @@ class LikesManagerPDO extends LikesManager
             'idea' => $ideaID
         ]);
 
-        $exists = $query->fetchColumn();
-        $query->closeCursor();
-
-        if (!$exists)
-        {
-            return false;
-        }
-
-        $query = $this->dao->prepare('DELETE FROM likes WHERE id = :id');
-        $query->execute([
-            'id' => $exists
-        ]);
-
-        return true;
+        return $query->fetchColumn();
     }
 }

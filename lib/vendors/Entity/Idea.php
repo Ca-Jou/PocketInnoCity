@@ -5,7 +5,7 @@ use Framework\Entity;
 
 class Idea extends Entity
 {
-    protected $id;
+    protected $ideaID;
     protected $author;
     protected $title;
     protected $content;
@@ -29,9 +29,9 @@ class Idea extends Entity
     }
 
     // setters
-    public function setId($id)
+    public function setIdeaID($id)
     {
-        $this->id = (int) $id;
+        $this->ideaID = (int) $id;
     }
 
     public function setAuthor($author)
@@ -94,9 +94,9 @@ class Idea extends Entity
     }
 
     // getters
-    public function id()
+    public function ideaID()
     {
-        return $this->id;
+        return $this->ideaID;
     }
 
     public function author()
