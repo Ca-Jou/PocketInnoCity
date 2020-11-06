@@ -14,19 +14,30 @@
 </header>
 <section class="formSection">
     <h1>S'inscrire</h1>
+
+    <?php if ($visitor->hasFlash())
+    {
+        ?>
+        <section id="main">
+            <p><?= $visitor->getFlash() ?></p>
+        </section>
+        <?php
+    }
+    ?>
+
     <form class="form" action="" method="post">
 
         <label for="pseudo">Pseudo</label>
-        <input type="text" name="pseudo">
+        <input type="text" name="pseudo" required placeholder="OKBoomer">
 
         <label for="mail">Adresse mail</label>
-        <input type="email" name="mail">
+        <input type="email" name="mail" required placeholder="jean.dupont@laposte.net">
 
         <label for="city">Ville</label>
-        <input type="text" name="city">
+        <input type="text" name="city" required placeholder="Bordeaux">
 
         <label for="password">Mot de passe</label>
-        <input type="password" name="password">
+        <input type="password" name="password" required placeholder="********">
 
         <input type="submit" name="" value="S'inscrire">
     </form>

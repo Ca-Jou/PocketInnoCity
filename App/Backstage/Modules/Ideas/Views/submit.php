@@ -10,22 +10,35 @@
 <body>
 <header>
     <a href="/"><img class="logo" src="/assets/img/logo.png" alt="logo"></a>
+    <h1>PocketInnoCity</h1>
 </header>
 <section class="formSection">
     <h1>Soumettre une idée</h1>
+
+    <?php if ($visitor->hasFlash())
+    {
+        ?>
+        <section id="main">
+            <p><?= $visitor->getFlash() ?></p>
+        </section>
+        <?php
+    }
+    ?>
+
     <form class="form" action="" method="post">
 
         <label for="title">Titre*</label>
-        <input type="text" name="title">
+        <input type="text" name="title" required placeholder="Plus d'espaces verts !">
 
         <label for="content">Description*</label>
-        <textarea name="content"></textarea>
+        <textarea name="content" rows="5" required placeholder="Pour remettre la Nature au centre de nos vies, remettons-la au centre de nos villes ! Pour commencer, je propose la création d'un parc avec de l'herbe et des fleurs mellifères sur la place des Quinconces."></textarea>
 
-        <label for="location">Localisation</label>
-        <input type="text" name="location">
+        <label for="location">Lieu (adresse, quartier...)</label>
+        <input type="text" name="location" placeholder="Place des Quinconces">
 
-        <label for="city">Ville</label>
-        <select name="city">
+        <label for="city">Ville*</label>
+        <select name="city" required>
+            <option value="1">Global</option>
             <?php
             foreach($citiesList as $city)
             {

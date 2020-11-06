@@ -14,13 +14,24 @@
 </header>
 <section class="formSection">
     <h1>Se connecter</h1>
+
+    <?php if ($visitor->hasFlash())
+    {
+        ?>
+        <section id="main">
+            <p><?= $visitor->getFlash() ?></p>
+        </section>
+        <?php
+    }
+    ?>
+
     <form class="form" action="" method="post">
 
         <label for="login">Pseudo</label>
-        <input type="text" name="login">
+        <input type="text" name="login" placeholder="OKBoomer">
 
         <label for="password">Mot de passe</label>
-        <input type="password" name="password">
+        <input type="password" name="password" placeholder="********">
 
         <input type="submit" name="" value="Connexion">
     </form>

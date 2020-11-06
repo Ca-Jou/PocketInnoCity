@@ -18,6 +18,17 @@
         <img src="/assets/img/profil.png" alt='photo de profil'>
         <h2><strong><?= $user['pseudo'] ?></strong></h2>
         <p><?= $city['name'] ?> (<?= $city['country'] ?>)</p>
+
+        <?php if ($visitor->hasFlash())
+        {
+            ?>
+            <section id="main">
+                <p><?= $visitor->getFlash() ?></p>
+            </section>
+            <?php
+        }
+        ?>
+
     </div>
     <div class="userInfoPic">
         <div>

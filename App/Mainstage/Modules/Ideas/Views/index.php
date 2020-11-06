@@ -10,10 +10,21 @@
 <body>
 <header>
     <a href="/"><img class="logo" src="/assets/img/logo.png" alt="logo"></a>
+    <h1>PocketInnoCity</h1>
 </header>
 <section>
+
+    <?php if ($visitor->hasFlash())
+    {
+        ?>
+        <section id="main">
+            <p><?= $visitor->getFlash() ?></p>
+        </section>
+        <?php
+    }
+    ?>
+
     <article class="presentation">
-        <h1>PocketInnoCity</h1>
         <img src="/assets/img/gens.png" alt="image de conversation" class="pictureHomePage">
         <p>Partage tes <strong>idées</strong>,</p>
         <p>Et <strong>réinvente</strong> ton lieu de vie !</p>

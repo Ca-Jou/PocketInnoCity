@@ -1,3 +1,19 @@
+#main {
+  background-color: #DB5723;
+  opacity: 1;
+  padding: 6px;
+  color: white;
+  font-size: 18px;
+  font-weight: 900;
+  text-align: center;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #C4C4C4;
+  font-family: 'Raleway', sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;

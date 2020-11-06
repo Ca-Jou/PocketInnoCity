@@ -62,7 +62,7 @@ class IdeasController extends BackController
 
             if (!$idea->isValid())
             {
-                $this->app->visitor()->setFlash('Please fill all required fields.');
+                $this->app->visitor()->setFlash('Merci de remplir tous les champs obligatoires.');
             }
             else
             {
@@ -73,5 +73,35 @@ class IdeasController extends BackController
                 $this->app->httpResponse()->redirect('/auth/profile.php');
             }
         }
+    }
+
+    public function executeLike(HTTPRequest $request)
+    {
+        $this->page->addVar('title', 'Like');
+
+        $userID = $this->app()->visitor()->getAttribute('userID');
+        $ideaID = htmlspecialchars($request->getData('ideaID'));
+        $cityID = htmlspecialchars($request->getData('cityID'));
+
+        $likesManager = $this->managers->getManagerOf('Likes');
+        $like = $likesManager->add($userID, $ideaID);
+
+        $this->app->httpResponse()->redirect('/auth/city-'.$cityID.'.php');
+        $this->page->addVar('like', $like); // vaut true si le like a fonctionné, false sinon
+    }
+
+    public function executeUnlike(HTTPRequest $request)
+    {
+        $this->page->addVar('title', 'Unlike');
+
+        $userID = $this->app()->visitor()->getAttribute('userID');
+        $ideaID = htmlspecialchars($request->getData('ideaID'));
+        $cityID = htmlspecialchars($request->getData('cityID'));
+
+        $likesManager = $this->managers->getManagerOf('Likes');
+        $unlike = $likesManager->delete($userID, $ideaID);
+
+        $this->app->httpResponse()->redirect('/auth/city-'.$cityID.'.php');
+        $this->page->addVar('unlike', $unlike); // vaut true si le unlike a fonctionné, false sinon
     }
 }

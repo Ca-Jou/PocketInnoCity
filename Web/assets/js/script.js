@@ -20,16 +20,15 @@ function toggleHeart(e)
 	{
 		//Envoie de la requete
 		requests.send(params.replaceAll("{2}", "true"));
-		number_likes = parseInt(number_likes) + 1;
+		e.getElementsByTagName("p")[0].textContent = parseInt(number_likes) + 1;
 	}
 	else
 	{
 		//Envoie de la requete
 		requests.send(params.replaceAll("{2}", "false"));
-		number_likes = parseInt(number_likes) - 1;
+		e.getElementsByTagName("p")[0].textContent = parseInt(number_likes) - 1;
 	}
 
-	console.log(e);
     e.classList.toggle("like");
 
 }

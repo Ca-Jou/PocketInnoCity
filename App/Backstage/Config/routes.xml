@@ -6,4 +6,8 @@
     <route url="/auth/cities.php" module="Ideas" action="cities"></route>
     <route url="/auth/profile.php" module="Profile" action="showProfile"></route>
     <route url="/auth/submit.php" module="Ideas" action="submit"></route>
+    <route url="/auth/subscribe-([0-9]+)\.php" module="Cities" action="subscribe" vars="cityID"></route>
+    <route url="/auth/unsubscribe-([0-9]+)\.php" module="Cities" action="unsubscribe" vars="cityID"></route>
+    <route url="/auth/like-([0-9]+)/city-([0-9]+)\.php" module="Ideas" action="like" vars="ideaID, cityID"></route>
+    <route url="/auth/unlike-([0-9]+)/city-([0-9]+)\.php" module="Ideas" action="unlike" vars="ideaID, cityID"></route>
 </routes>

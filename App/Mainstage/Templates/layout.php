@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 
-<section id="main">
-    <?php if ($visitor->hasFlash()) echo '<p style="text-align: center;">', $visitor->getFlash(), '</p>'; ?>
-</section>
-
 <?= $content ?>
 
 <footer>

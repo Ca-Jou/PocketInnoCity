@@ -20,7 +20,7 @@ class ConnectionController extends BackController
 
             if (strlen($password) < 8)
             {
-                $this->app->visitor()->setFlash('Invalid password. Password should contain at least 8 characters.');
+                $this->app->visitor()->setFlash('Mot de passe non valide (doit contenir au moins 8 caractères).');
             }
 
             $cityManager = $this->managers->getManagerOf('Cities');
@@ -43,7 +43,7 @@ class ConnectionController extends BackController
 
             if (!$user->isValid())
             {
-                $this->app->visitor()->setFlash('Please fill all fields.');
+                $this->app->visitor()->setFlash('Merci de remplir tous les champs requis.');
             }
 
             $userManager = $this->managers->getManagerOf('Users');
@@ -51,14 +51,17 @@ class ConnectionController extends BackController
 
             if (isset($existing))
             {
-                $this->app->visitor()->setFlash('This pseudo is not available, sorry !');
+                $this->app->visitor()->setFlash('Ce pseudo est déjà pris !');
                 $this->app->visitor()->setAuthenticated(false);
             }
             else
             {
                 $userManager->add($user);
-                $this->app->visitor()->setFlash('Your account was properly created!');
-                $this->app->visitor()->setAuthenticated(true);
+
+                $this->app->visitor()->setAuthenticated(false);
+                $this->app->visitor()->setFlash('Votre compte a bien été créé !');
+
+                $this->app->httpResponse()->redirect('/signin/');
             }
         }
     }

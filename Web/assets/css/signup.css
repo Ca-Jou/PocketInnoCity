@@ -13,6 +13,8 @@
   font-size: 18px;
   border: 1px #07689F solid;
   border-radius: 8px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 input[type='text'],
 input[type='email'],

@@ -26,7 +26,7 @@ class ConnectionController extends BackController
             }
             else
             {
-                $this->app->visitor()->setFlash('Invalid username or password.');
+                $this->app->visitor()->setFlash('Pseudo ou mot de passe non valide.');
             }
         }
     }
@@ -36,6 +36,7 @@ class ConnectionController extends BackController
         $this->page->addVar('title', 'Déconnexion');
 
         $this->app->visitor()->setAuthenticated(false);
+        $this->app->visitor()->setAttribute('userID', null);
         $this->app->visitor()->setFlash('Vous avez été déconnecté.e.');
 
         $this->app->httpResponse()->redirect('/');
