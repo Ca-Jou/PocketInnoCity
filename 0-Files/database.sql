@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS users (
 	pseudo varchar(30) NOT NULL,
 	mail varchar(100) NOT NULL,
 	city int unsigned NOT NULL,
-	password varchar(20) NOT NULL,
+	password varchar(128) NOT NULL,
 	PRIMARY KEY (userID),
 	FOREIGN KEY (city) REFERENCES cities(cityID)
 ) ENGINE=InnoDB, DEFAULT CHARSET=utf8 ;
@@ -82,14 +82,14 @@ CREATE TABLE IF NOT EXISTS likes (
 
 # Creation of our user entries
 INSERT INTO users VALUES
-(1, 'Alexandre', 'alexandre.le.porho@gmail.com', 2, 'password'),
-(2, 'Antoine', 'antfruche@gmail.com', 2, 'password'),
-(3, 'Camille', 'camille.jouan@epsi.fr', 2, 'password'),
-(4, 'Gaëtan', 'gaetan.filleul@gmail.com', 2, 'password'),
-(5, 'Ilias', 'ilias271099@gmail.com', 2, 'password'),
-(6, 'Johanna', 'johanna.jato@gmail.com', 2, 'password'),
-(7, 'Mathilde', 'mathildelazo@gmail.com', 2, 'password'),
-(8, 'Yohan', 'yohan.fevre0@gmail.com', 2, 'password');
+(1, 'Alexandre', 'alexandre.le.porho@gmail.com', 2, '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8'),
+(2, 'Antoine', 'antfruche@gmail.com', 2, '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8'),
+(3, 'Camille', 'camille.jouan@epsi.fr', 2, '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8'),
+(4, 'Gaëtan', 'gaetan.filleul@gmail.com', 2, '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8'),
+(5, 'Ilias', 'ilias271099@gmail.com', 2, '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8'),
+(6, 'Johanna', 'johanna.jato@gmail.com', 2, '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8'),
+(7, 'Mathilde', 'mathildelazo@gmail.com', 2, '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8'),
+(8, 'Yohan', 'yohan.fevre0@gmail.com', 2, '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8');
 
 # Creation of our roles = admins of the 'Global' city
 INSERT INTO roles(user, admin) VALUES

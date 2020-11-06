@@ -37,8 +37,9 @@ class ConnectionController extends BackController
 
         $this->app->visitor()->setAuthenticated(false);
         $this->app->visitor()->setAttribute('userID', null);
-        $this->app->visitor()->setFlash('Vous avez été déconnecté.e.');
+        $this->app->visitor()->setFlash('Vous avez été déconnecté.e. Vous allez être redirigé.e vers l\'accueil.');
 
-        $this->app->httpResponse()->redirect('/');
+        $this->app->httpResponse()->addHeader('Refresh: 5; URL=/');
+        session_destroy();
     }
 }
