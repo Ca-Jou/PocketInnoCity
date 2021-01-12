@@ -1,0 +1,98 @@
+#main {
+  background-color: #DB5723;
+  opacity: 1;
+  padding: 6px;
+  color: white;
+  font-size: 18px;
+  font-weight: 900;
+  text-align: center;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #C4C4C4;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #07689F;
+  font-family: 'Raleway', sans-serif;
+}
+header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+h1 {
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  color: #07689F;
+  cursor: pointer;
+}
+.logo {
+  width: 75px;
+
+}
+.socialMedia ul li a svg {
+  width: 30px;
+  fill: #07689F;
+}
+.socialMedia ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 120px;
+}
+.socialMedia ul li {
+  list-style: none;
+}
+nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: #DBECF5;
+}
+nav ul li {
+  list-style: none;
+  padding: 8px;
+}
+nav ul li a {
+  color: #07689F;
+  text-decoration: none;
+  font-size: 18px;
+}
+nav ul li a img {
+  width: 55px;
+}
+nav svg {
+  margin-bottom: -38px;
+}
+@media screen and (max-width:572px) {
+  nav svg {
+    margin-bottom: -9px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}

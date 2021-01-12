@@ -1,0 +1,129 @@
+.cardHeart {
+  width: 70%;
+  margin: 18px auto;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 8px 8px 24px #bdbdbd,
+             -8px -8px 24px #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+
+}
+.cardHeart:first-of-type {
+  margin-top: 80px;
+}
+.cardHeart:last-of-type {
+  margin-bottom: 265px;
+}
+.cardHeart button {
+  width: 60px;
+  background-color: #ffffff;
+  border: none;
+  outline-style: none;
+}
+.cardHeart button:active {
+  outline-style: none;
+  color: none;
+}
+.cardHeart button svg path:nth-of-type(2) {
+  fill: #DB5723;
+}
+.cardHeart button p {
+  color: #DB5723;
+  line-height: 0px;
+}
+button svg {
+  fill: white;
+}
+.like svg {
+  fill: #DB5723;
+}
+
+.cardHeart div {
+  flex: 1 1 50%;
+}
+.cardHeart span svg {
+  fill: #DB5723;
+  width: 50px;
+}
+.cities h1{
+  width: 70%;
+  margin: 18px auto;
+}
+
+.city {
+  width: 40%;
+  margin-left: 180px;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 8px 8px 24px #bdbdbd,
+             -8px -8px 24px #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+.city svg {
+  width: 30px;
+  height: 30px;
+  margin-right: 12px;
+}
+.city div p {
+  width: 90%;
+}
+
+.city svg path:nth-of-type(1) {
+  fill: #07689F;
+}
+.city svg path:nth-of-type(2) {
+  fill: #ffffff;
+}
+.city:last-of-type {
+  margin-bottom: 120px;
+}
+
+
+ @media screen and (max-width:572px) {
+   .citySection h2 {
+     margin-left: 28px;
+     margin-right: 12px;
+   }
+   .pSection {
+     width: 86%;
+     margin: 0 auto;
+   }
+   .cardHeart {
+     width: 80%;
+   }
+   .cardHeart:first-of-type {
+     margin-top: 20px;
+   }
+   .cardHeart:last-of-type {
+     margin-bottom: 25px;
+   }
+   .cardHeart button {
+     width: 40px;
+   }
+   .cardHeart div p {
+     width: 90%;
+   }
+   .cities h1{
+     width: 80%;
+     margin: 18px auto;
+   }
+
+   .nocity{
+     margin-left: 38px;
+   }
+
+   .city {
+    width: 80%;
+    margin: 12px auto;
+   }
+   .city svg {
+     width: 30px;
+     height: 30px
+   }
+ }

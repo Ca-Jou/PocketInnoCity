@@ -1,0 +1,51 @@
+.formSection h1{
+    text-align: center;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin: 0 auto;
+}
+label {
+    margin: 18px 0;
+    font-size: 18px;
+}
+input[type='text'],
+select,
+textarea
+{
+    padding: 14px;
+    border: 1px grey solid;
+    border-radius: 8px;
+}
+
+.form input[type='submit'] {
+    margin: 60px auto;
+    width: 100px;
+    padding: 20px;
+    background-color: #07689F;
+    color: white;
+    font-size: 18px;
+    border: 1px #07689F solid;
+    border-radius: 8px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.form input[type='submit']:hover {
+    background-color: white;
+    color: #07689F;
+}
+
+@media screen and (max-width:572px) {
+    .form {
+        width: 90%;
+    }
+    .form input[type='submit'] {
+        width: 200px;
+        padding: 20px;
+        font-size: 18px;
+        margin: 40px auto 60px auto;
+    }
+
+}

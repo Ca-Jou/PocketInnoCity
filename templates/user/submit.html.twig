@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pocket Inno City{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;600&display=swap">
+{% endblock %}
+
+{% block body %}
+    <section class="formSection">
+        <h1>S'inscrire</h1>
+        {{ form(user_form) }}
+    </section>
+
+{% endblock %}
