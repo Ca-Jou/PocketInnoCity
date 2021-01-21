@@ -47,18 +47,18 @@ class AppFixtures extends Fixture
         $camille = new User();
         $camille->setPseudo('camille');
         $camille->setCity($bx);
-        $camille->setEmail('camille.jouan@blackfire.io');
+        $camille->setEmail('camille.jouan@epsi.fr');
         $camille->setPassword($this->passwordEncoder->encodePassword($camille, 'camille'));
         $camille->setRoles(['ROLE_USER', 'ROLE_ADMIN']);
         $manager->persist($camille);
 
-        $foobar = new User();
-        $foobar->setPseudo('foobar');
-        $foobar->setCity($sf);
-        $foobar->setEmail('foo.bar@gmail.com');
-        $foobar->setPassword($this->passwordEncoder->encodePassword($foobar, 'foobar'));
-        $foobar->setRoles(['ROLE_USER']);
-        $manager->persist($foobar);
+        $johanna = new User();
+        $johanna->setPseudo('johanna');
+        $johanna->setCity($bx);
+        $johanna->setEmail('johanna.jato@epsi.fr');
+        $johanna->setPassword($this->passwordEncoder->encodePassword($johanna, 'johanna'));
+        $johanna->setRoles(['ROLE_USER']);
+        $manager->persist($johanna);
 
         $i1 = new Idea();
         $i1->setAuthor($camille);
@@ -69,7 +69,7 @@ class AppFixtures extends Fixture
         $manager->persist($i1);
 
         $i2 = new Idea();
-        $i2->setAuthor($foobar);
+        $i2->setAuthor($johanna);
         $i2->setTitle("Une piscine olympique");
         $i2->setCity($li);
         $i2->setContent("Le sport c'est la sante! Installons une piscine Olympique dans notre belle ville pour maintenir ses habitants en forme!!!");
@@ -83,7 +83,7 @@ class AppFixtures extends Fixture
         $manager->persist($i3);
 
         $i4 = new Idea();
-        $i4->setAuthor($foobar);
+        $i4->setAuthor($johanna);
         $i4->setTitle("Trees");
         $i4->setLocation("City centers");
         $i4->setCity($wd);
